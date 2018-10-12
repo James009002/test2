@@ -1,0 +1,105 @@
+//階層//
+.header
+	padding: 30px
+	div                                   //header下面的div會有的效果//
+		padding: 10px
+		p                                 //header中div下的p會有的效果//
+			font-size: 30px
+	p                                     //header中的p會有的效果//
+		font-size: 50px
+
+	.content1
+		padding: 20px
+		p
+			font-size: 30px
+			font-weight: bold
+		div
+			padding: 50px
+ 
+		
+//變數 - 使用$ //
+$color-red: red
+$color-black: black
+$font-size1: 30px
+$font-size2: 50px
+
+
+//@mixin 和extend//
+
+
+@mixin div1
+	width: 300px
+	height: 30px
+	padding: 30px
+
+@mixin bg-b
+	background-color: $color-black
+
+%div1
+	width: 500px
+	height: 500px
+	padding: 20px
+%div2
+	width: 100px
+	heigth: 100px
+
+
+
+
+.footer
+	@include div1                          //引入mixin//
+	@extend %div1 						   //引入extend//	
+	font-size: $font-size2 				   //使用前面變數假設的//	
+	.content1
+		@extend %div1                       
+		p
+			font-size: $font-size1			
+	.content2
+		@extend %div1
+		p
+			color: $color-red
+		div
+			@include div1
+
+
+//經過觀察後發現差別在於～ 用extend的時候 他會合併相同的程式碼 而使用@mixin的時候他會加入css中 變成同樣的css不同選擇器使用它 最後css變很多//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
