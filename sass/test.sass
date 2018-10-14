@@ -1,89 +1,193 @@
-//階層//
+$bg-color: #f1f1e9
+$font-size50: 50px
+$font-size20: 20px
+@mixin click-border-b
+	border: 1px solid black
+	text-align: center
+	font-weight: bold
+@mixin click-border-w
+	border: 1px solid white
+	text-align: center
+
 .header
-	padding: 30px
-	div                                   //header下面的div會有的效果//
-		padding: 10px
-		p                                 //header中div下的p會有的效果//
-			font-size: 30px
-	p                                     //header中的p會有的效果//
-		font-size: 50px
+	z-index: 99
+	position: fixed
+	background-color: white
+	height: 100px
+	padding: 0px 30px 0px 30px
+	width: 100%
+	font-family: fantasy
+	text-align: center
 
-	.content1
-		padding: 20px
-		p
-			font-size: 30px
-			font-weight: bold
+	.menu-logo
+		width: 45%
+		display: inline-block
+	.menu-content
+		width: 50%
+		display: inline-block
 		div
-			padding: 50px
- 			display: inline-block
-		  
-		  
-//變數 - 使用$ //
-$color-red: red
-$color-black: black
-$font-size1: 30px
-$font-size2: 50px
+			width: 140px
+			float: right
+			font-size: $font-size20
+			font-weight: bold
 
 
-//@mixin 和extend//
 
 
-@mixin div1
-	width: 300px
-	height: 30px
-	padding: 30px
 
-@mixin bg-b
-	background-color: $color-black
+.container
+	background-color: $bg-color
+	.container-pic
+		z-index: 1
+		float: right
+	.container-text
+		position: relative
+		z-index: 2
+		left: 5%
+		top: -340px
+		
 
-%div1
-	width: 500px
-	height: 500px
+.section1
+	background-color: $bg-color
+	padding: 40px
+	.section1-pic
+		margin-left: 20px
+		img
+			z-index: 2
+			width: 75%
+	.section1-div
+		position: relative
+		margin-left: 10%
+		margin-top: -50px
+		img
+			width: 25%
+		.section-content	
+			position: relative
+			float: right
+			width: 350px
+			height: 400px
+			background-color: white;
+			left: -10%
+			margin-top: -300px
+			padding: 50px 20px 50px 20px
+			line-height: 1.5
+
+			.section-content-logo
+				border-top: 1px solid black
+				border-bottom: 1px solid black
+				text-align: center
+				.content-logo
+					width: 250px
+			p
+				text-align: center
+
+.section2
+	background-color: $bg-color
+	padding: 100px
+	.section2-pic
+		width: 60%
+		float: right
+		margin-top: 50px
+	.section2-div
+		width: 35%
+		text-align: center
+		.section2-div-title
+
+			font-size: $font-size50
+			.p1t
+				color: red
+				display: inline
+			.p2
+				color: green
+				display: inline
+		div
+			.section2-div-p1
+				font-size: $font-size20
+				font-weight: bold
+
+		.section2-div-bottom
+			@include click-border-b
+			margin: 10px		
+			font-size: $font-size20
+
+.section3
+	background-color: $bg-color
+	padding: 150px 30px 100px 30px
+	text-align: center
+	div
+		display: inline-block
+		img
+			width: 49%
+
+.section4
+	background-color: $bg-color
 	padding: 20px
-%div2
-	width: 100px
-	heigth: 100px
+	div
+		width: 50%
+		margin-left: 10px
+		font-size: $font-size20
+		margin: 50px
+	.section4-title
+		font-size: $font-size50
+	.section4-click
+		width: 300px
+		margin-top: 20px
+		padding: 20px
+		@include click-border-b
 
+
+.access
+	background-image: url( 'https://www.tenda.jp/wp-content/themes/latendarossa-html/dist/assets/images/top/access_bg.png  ' ); 
+	width: 100%
+	height: 500px
+	#google-maps
+		vertical-align: middle
+		width: 60%
+		height: 400px
+		margin-left: 50px
+		margin-top: 50px
+
+	.access-click	
+		@include click-border-w
+		font-size: 30px
+		width: 350px
+	.access-content
+		float: right
+		color: white
+		margin-top: -400px
+		margin-right: 100px
+		width: 40%
+		div
+			overflow: hidden
+	.access-title
+		font-size: $font-size50
 
 
 
 .footer
-	@include div1                          //引入mixin//
-	@extend %div1 						   //引入extend//	
-	font-size: $font-size2 				   //使用前面變數假設的//	
-	.content1
-		@extend %div1                       
-		p
-			font-size: $font-size1			
-	.content2
-		@extend %div1
-		p
-			color: $color-red
-		div
-			@include div1
-
-
-//經過觀察後發現差別在於～ 用extend的時候 他會合併相同的程式碼 而使用@mixin的時候他會加入css中 變成同樣的css不同選擇器使用它 最後css變很多//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	background-color: $bg-color
+	height: 500px
+	padding: 50px 30px 0px 30px
+	text-align: center
+	.footer-inner
+	.box-title
+		font-size: $font-size20
+		border-top: 1px solid black
+		border-bottom: 1px solid black
+		width: 350px
+		margin: auto	
+	.box-content
+		font-size: $font-size20
+	.our-phone
+		font-size: $font-size50
+	.Community
+		width: 200px
+		text-align: center
+		display: inline-block
+		.Community-logo
+			width: 20px
+	.copyright
+		font-size: 10px
 
 
 
