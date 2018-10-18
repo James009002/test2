@@ -1,13 +1,31 @@
 $bg-color: #f1f1e9
 $font-size50: 50px
 $font-size20: 20px
+
 @mixin click-border-b
 	border: 1px solid black
 	text-align: center
 	font-weight: bold
+
 @mixin click-border-w
 	border: 1px solid white
 	text-align: center
+
+@mixin decoration1
+	width: 0px
+	height: 0px
+	border: 5px solid transparent
+	border-bottom-color: red
+	margin: auto
+
+@mixin decoration2
+	width: 0px
+	height: 0px
+	border: 5px solid transparent
+	border-top-color: red
+	margin: auto
+
+
 
 .header
 	z-index: 99
@@ -22,9 +40,12 @@ $font-size20: 20px
 	margin-top: -10px
 
 	.menu-logo
-		width: 45%
+		width: 30%
 		display: inline-block
-		margin-top: 20px
+		margin-top: 45px
+		img
+			width: 50%
+			margin-left: -150px	
 	.menu-content
 		width: 50%
 		display: inline-block
@@ -43,11 +64,15 @@ $font-size20: 20px
 	.container-pic
 		z-index: 1
 		float: right
+		img
+			width: 90%
+			float: right
 	.container-text
 		position: relative
 		z-index: 2
 		margin-left: 50px
 		top: -340px
+
 		
 
 .section1
@@ -59,7 +84,7 @@ $font-size20: 20px
 			z-index: 2
 			width: 75%
 
-	.section1-div
+	.section1-inner
 		position: relative
 		margin-left: 10%
 		margin-top: -50px
@@ -69,18 +94,23 @@ $font-size20: 20px
 			position: relative
 			float: right
 			width: 40%
-			height: 400px
+			height: 450px
 			background-color: white;
 			left: -10%
-			margin-top: -300px
+			margin-top: -500px
 			padding: 50px 20px 50px 20px
 			line-height: 1.5
 			div
-				border-bottom: 1px solid black
-			.section-content-logo
 				border-top: 1px solid black
-				border-bottom: 1px solid black
 				text-align: center
+			.decoration1
+				@include decoration1
+			.decoration2
+				@include decoration2
+			.section-content-logo
+				.content
+					border-top: 1px solid black
+					text-align: center
 				.content-logo
 					width: 250px
 			p
@@ -96,68 +126,97 @@ $font-size20: 20px
 	.section2-pic1
 		width: 60%
 		float: right
-	.section2-div
+	.section2-inner
 		width: 35%
 		text-align: center
-		.section2-div-title
+		.decoration1
+			@include decoration1
+		.decoration2
+			@include decoration2
+
+		.section2-title
 			border-top: 1px solid black
 			font-size: $font-size50
-			.p1t
+			font-family: "Playfair Display", serif
+			.p1
 				color: red
 				display: inline
 			.p2
 				color: green
 				display: inline
+
 		div
-			.section2-div-p1
+			.section2-p1
 				font-size: $font-size20
 				font-weight: bold
 
-		.section2-div-bottom
+		.section2-box
 			@include click-border-b
 			margin: 10px		
 			font-size: $font-size20
+			height: 50px
+			font-size: 30px
 
 .section3
 	background-color: $bg-color
-	padding: 150px 30px 100px 30px
+	padding: 150px 0px 100px 0px
 	text-align: center
-	height: 287px
+	width: 100%
+
 	.section3-pic
 		background-color: #f1f1e9
-		text-align: center
 		width: 100%
-		img
+		display: inline-block
+		div
 			width: 49%
-			height: 287px
+			height: 500px
+			background-position: center
+			overflow: hidden
+			display: inline-block		
+		.img-1
+			background-image: url("file:///Users/jamesliu/test2/img/section3-left.png")
+			background-repeat: no-repeat
+
+		.img-2
+			background-image: url("https://www.tenda.jp/wp-content/themes/latendarossa-html/dist/assets/images/top/pic10.png")
+			background-repeat: no-repeat
 	.section3-background
-		width: 49%
-		height: 287px
+		width: 500px
+		padding: 100px
 		background-color: rgba(0, 0, 0, 0.8)
 		position: relative
+		height: 300px
 		margin: auto
-		div
-			font-size: 15px
-			color: white 
-			text-align: center
-			margin-top: 8px
-			.section3-title
-				font-size: 30px
-				margin-top: -300px
-			div
-				@include click-border-w
-				font-size: 30px
-				width: 200px
-				margin: auto
+		margin-top: -505px
+		.section3-inner
+			border-top: 1px solid white
+			border-bottom: 1px solid white
+			color: white
+			font-family: "Playfair Display", serif		
+			.title
+				font-size: 40px
 
+			.decoration1
+				width: 0px
+				height: 0px
+				border: 5px solid transparent
+				border-bottom-color: white	
+				margin: auto				
 
-
-
-
+			.decoration2
+				width: 0px
+				height: 0px
+				border: 5px solid transparent
+				border-top-color: white
+				margin: auto				
+		.section3-box
+			border: 1px solid white
+			width: 300px
+			margin: auto
 .section4
 	background-color: $bg-color
 	padding: 20px
-	div
+	.section4-inner
 		width: 45%
 		font-size: $font-size20
 		margin: 50px
@@ -165,31 +224,40 @@ $font-size20: 20px
 		font-size: $font-size50
 		.title-change
 			color: red
-			letter-spacing: -5px
+			letter-spacing: 5px
+	.section4-content
+		text-align: left
 
-	.section4-click
+	.section4-box
 		width: 300px
 		margin-top: 20px
-		padding: 20px
 		@include click-border-b
-
+		margin-left: 50px
+		font-size: $font-size20
+	.Calendar
+		width: 500px
+		height: 350px
+		float: right
+		background-color: white
+		margin-top: -505px
 
 .access
 	background-image: url( 'https://www.tenda.jp/wp-content/themes/latendarossa-html/dist/assets/images/top/access_bg.png  ' ); 
 	width: 100%
 	height: 500px
 	#google-maps
+		position: relative
 		vertical-align: middle
 		width: 60%
 		height: 400px
-		margin-left: 50px
-		margin-top: 50px
+		top: 22px
 
-	.access-click	
+	.access-box	
 		@include click-border-w
-		font-size: 30px
-		width: 350px
-	.access-content
+		font-size: 20px
+		width: 300px
+		margin: auto
+	.access-inner
 		float: right
 		color: white
 		margin-top: -400px
@@ -197,6 +265,11 @@ $font-size20: 20px
 		width: 40%
 		div
 			overflow: hidden
+			font-family: "Playfair Display", serif
+			.title
+				width: 100px
+				float: left
+
 	.access-title
 		font-size: $font-size50
 
@@ -216,6 +289,11 @@ $font-size20: 20px
 		margin: auto	
 	.box-content
 		font-size: $font-size20
+		.decoration
+		.decoration1
+			@include decoration1
+		.decoration2
+			@include decoration2
 	.our-phone
 		font-size: $font-size50
 	.Community
