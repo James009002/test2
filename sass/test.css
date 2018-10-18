@@ -200,9 +200,10 @@
     font-size: 50px; }
     .section4 .section4-title .title-change {
       color: red;
-      letter-spacing: 5px; }
+      letter-spacing: 0.2em; }
   .section4 .section4-content {
-    text-align: left; }
+    text-align: left;
+    letter-spacing: 0.2em; }
   .section4 .section4-box {
     width: 300px;
     margin-top: 20px;
