@@ -49,10 +49,11 @@ $font-size20: 20px
 	.menu-content
 		width: 50%
 		display: inline-block
+		font-family: "Roboto", sans-serif
 		div
 			width: 110px
 			float: right
-			font-size: 20px
+			font-size: $font-size20
 			font-weight: bold
 
 
@@ -118,44 +119,45 @@ $font-size20: 20px
 
 .section2
 	background-color: $bg-color
-	padding: 100px
+	padding: 50px 20px 50px 100px
 	.section2-pic
-		width: 60%
+		width: 75%
 		float: right
 		margin-top: 50px
 	.section2-pic1
 		width: 60%
 		float: right
 	.section2-inner
-		width: 35%
+		width: 28%
 		text-align: center
+		.section2-title
+			border-top: 1px solid black
+			font-size: $font-size50
+			font-family: "Playfair Display", serif
+			.title1
+				color: red
+				display: inline
+			.title2
+				color: green
+				display: inline
 		.decoration1
 			@include decoration1
 		.decoration2
 			@include decoration2
 
-		.section2-title
-			border-top: 1px solid black
-			font-size: $font-size50
-			font-family: "Playfair Display", serif
-			.p1
-				color: red
-				display: inline
-			.p2
-				color: green
-				display: inline
 
-		div
-			.section2-p1
-				font-size: $font-size20
-				font-weight: bold
+		.section2-content
+			font-size: 16px
+			font-weight: bold
+			.p2
+				font-weight: normal
+				font-size: 14px
 
 		.section2-box
 			@include click-border-b
 			margin: 10px		
-			font-size: $font-size20
 			height: 50px
-			font-size: 30px
+			font-size: 15px
 
 .section3
 	background-color: $bg-color
@@ -181,7 +183,7 @@ $font-size20: 20px
 			background-image: url("https://www.tenda.jp/wp-content/themes/latendarossa-html/dist/assets/images/top/pic10.png")
 			background-repeat: no-repeat
 	.section3-background
-		width: 500px
+		width: 400px
 		padding: 100px
 		background-color: rgba(0, 0, 0, 0.8)
 		position: relative
@@ -235,12 +237,25 @@ $font-size20: 20px
 		margin-left: 50px
 		font-size: $font-size20
 	.Calendar
-		width: 500px
+		width: 45%
 		height: 350px
 		float: right
 		background-color: white
 		margin-top: -505px
-
+		.style
+			text-a1lign: center
+			width: 81%
+			font-weight: bold
+			font-size: 30px
+			height: 50px
+			margin-top: -5px
+			margin: auto
+			margin-top: 130px
+		.style2
+			width: 400px
+			text-align: center
+			margin-top: -30px
+			letter-spacing: 3px
 .access
 	background-image: url( 'https://www.tenda.jp/wp-content/themes/latendarossa-html/dist/assets/images/top/access_bg.png  ' ); 
 	width: 100%
@@ -254,7 +269,7 @@ $font-size20: 20px
 
 	.access-box	
 		@include click-border-w
-		font-size: 20px
+		font-size: $font-size20
 		width: 300px
 		margin: auto
 	.access-inner
@@ -280,7 +295,6 @@ $font-size20: 20px
 	height: 500px
 	padding: 50px 30px 0px 30px
 	text-align: center
-	.footer-inner
 	.box-title
 		font-size: $font-size20
 		border-top: 1px solid black
