@@ -25,6 +25,15 @@
       float: right;
       font-size: 20px;
       font-weight: bold; }
+      .header .menu-content div .line {
+        position: absolute;
+        bottom: 50%;
+        width: 100px;
+        height: 1px;
+        background-color: black;
+        display: block;
+        margin-top: -0px;
+        margin-left: 5px; }
 
 .container {
   background-color: #f1f1e9; }
@@ -42,9 +51,9 @@
 
 .section1 {
   background-color: #f1f1e9;
-  padding: 20px; }
+  padding: 50px 20px 40px 0px; }
   .section1 .section1-pic {
-    margin-left: 20px; }
+    margin-top: 10px; }
     .section1 .section1-pic img {
       z-index: 2;
       width: 75%; }
@@ -65,7 +74,6 @@
       padding: 50px 20px 50px 20px;
       line-height: 1.5; }
       .section1 .section1-inner .section-content div {
-        border-top: 1px solid black;
         text-align: center; }
       .section1 .section1-inner .section-content .decoration1 {
         width: 0px;
@@ -79,36 +87,38 @@
         border: 5px solid transparent;
         border-top-color: red;
         margin: auto; }
-      .section1 .section1-inner .section-content .section-content-logo .content {
-        border-top: 1px solid black;
-        text-align: center; }
-      .section1 .section1-inner .section-content .section-content-logo .content-logo {
-        width: 250px; }
+      .section1 .section1-inner .section-content .section-content-logo {
+        border-top: 1px solid black; }
+        .section1 .section1-inner .section-content .section-content-logo .content {
+          text-align: center; }
+        .section1 .section1-inner .section-content .section-content-logo .content-logo {
+          width: 250px; }
       .section1 .section1-inner .section-content p {
         text-align: center; }
 
 .section2 {
   background-color: #f1f1e9;
-  padding: 50px 20px 50px 100px; }
+  padding: 150px 20px 150px 100px; }
   .section2 .section2-pic {
     width: 75%;
     float: right;
     margin-top: 50px; }
   .section2 .section2-pic1 {
-    width: 60%;
-    float: right; }
+    width: 30%;
+    margin-left: 450px;
+    margin-top: -100px; }
   .section2 .section2-inner {
     width: 28%;
     text-align: center; }
     .section2 .section2-inner .section2-title {
       border-top: 1px solid black;
       font-size: 50px;
-      font-family: "Playfair Display", serif; }
+      font-family: "Playfair Display", serif;
+      margin-left: 30px; }
       .section2 .section2-inner .section2-title .title1 {
-        color: red;
+        color: #730004;
         display: inline; }
       .section2 .section2-inner .section2-title .title2 {
-        color: green;
         display: inline; }
     .section2 .section2-inner .decoration1 {
       width: 0px;
@@ -129,7 +139,7 @@
         font-weight: normal;
         font-size: 14px; }
     .section2 .section2-inner .section2-box {
-      border: 1px solid black;
+      border: 1px solid #000;
       text-align: center;
       font-weight: bold;
       margin: 10px;
@@ -138,26 +148,134 @@
 
 .section3 {
   background-color: #f1f1e9;
-  padding: 150px 0px 100px 0px;
+  padding: 50px 20px 50px 0px; }
+  .section3 .section3-pic1 {
+    width: 60%; }
+  .section3 .section3-pic2 {
+    width: 23%;
+    margin-left: -650px;
+    margin-bottom: -100px; }
+  .section3 .section3-inner {
+    text-align: center;
+    width: 30%;
+    padding: 20px;
+    float: right;
+    margin: auto;
+    margin-right: 50px;
+    margin-top: 70px; }
+    .section3 .section3-inner .section3-title {
+      font-size: 50px;
+      font-family: "Playfair Display", serif;
+      border-top: 1px solid black;
+      width: 300px;
+      margin: auto; }
+      .section3 .section3-inner .section3-title .p1 {
+        color: #730004;
+        display: inline; }
+      .section3 .section3-inner .section3-title .p2 {
+        display: inline;
+        margin-left: -10px; }
+    .section3 .section3-inner .decoration1 {
+      width: 0px;
+      height: 0px;
+      border: 5px solid transparent;
+      border-bottom-color: red;
+      margin: auto; }
+    .section3 .section3-inner .decoration2 {
+      width: 0px;
+      height: 0px;
+      border: 5px solid transparent;
+      border-top-color: red;
+      margin: auto; }
+    .section3 .section3-inner .new-content {
+      font-weight: bold; }
+      .section3 .section3-inner .new-content .p1 {
+        font-size: 20px; }
+      .section3 .section3-inner .new-content .p2 {
+        font-size: 15px; }
+    .section3 .section3-inner .section3-box {
+      border: 1px solid #000;
+      text-align: center;
+      font-weight: bold;
+      width: 300px;
+      margin: auto; }
+
+.section4 {
+  background-color: #f1f1e9;
+  padding: 270px 50px 10px 30px; }
+  .section4 .section4-inner {
+    padding: 30px;
+    width: 31%;
+    font-family: "Playfair Display", serif; }
+    .section4 .section4-inner .title {
+      border-top: 1px solid black;
+      font-size: 50px;
+      font-weight: bold;
+      width: 250px;
+      text-align: center;
+      margin: auto; }
+      .section4 .section4-inner .title .p1 {
+        color: #730004; }
+      .section4 .section4-inner .title .p2 {
+        margin-left: -10px; }
+    .section4 .section4-inner .decoration {
+      padding: 10px; }
+      .section4 .section4-inner .decoration .decoration1 {
+        width: 0px;
+        height: 0px;
+        border: 5px solid transparent;
+        border-bottom-color: red;
+        margin: auto; }
+      .section4 .section4-inner .decoration .decoration2 {
+        width: 0px;
+        height: 0px;
+        border: 5px solid transparent;
+        border-top-color: red;
+        margin: auto; }
+    .section4 .section4-inner .content {
+      font-weight: normal;
+      font-size: 15px;
+      text-align: center; }
+    .section4 .section4-inner .section4-box {
+      border: 1px solid #000;
+      text-align: center;
+      font-weight: bold;
+      width: 300px;
+      margin: auto; }
+  .section4 .section4-pic {
+    float: right;
+    width: 60%;
+    margin-top: -600px; }
+    .section4 .section4-pic .section4-pic1 {
+      width: 45%;
+      margin-left: 290px;
+      position: relative; }
+    .section4 .section4-pic .section4-pic2 {
+      margin-top: -135px;
+      width: 100%; }
+
+.section5 {
+  background-color: #f1f1e9;
+  padding: 150px 0px 0px 0px;
   text-align: center;
   width: 100%; }
-  .section3 .section3-pic {
+  .section5 .section5-pic {
     background-color: #f1f1e9;
     width: 100%;
     display: inline-block; }
-    .section3 .section3-pic div {
+    .section5 .section5-pic div {
       width: 49%;
       height: 500px;
       background-position: center;
       overflow: hidden;
       display: inline-block; }
-    .section3 .section3-pic .img-1 {
-      background-image: url("file:///Users/jamesliu/test2/img/section3-left.png");
+    .section5 .section5-pic .img-1 {
+      background-image: url("file:///Users/jamesliu/test2/img/section5-left.png");
       background-repeat: no-repeat; }
-    .section3 .section3-pic .img-2 {
+    .section5 .section5-pic .img-2 {
       background-image: url("https://www.tenda.jp/wp-content/themes/latendarossa-html/dist/assets/images/top/pic10.png");
       background-repeat: no-repeat; }
-  .section3 .section3-background {
+  .section5 .section5-background {
     width: 400px;
     padding: 100px;
     background-color: rgba(0, 0, 0, 0.8);
@@ -165,61 +283,61 @@
     height: 300px;
     margin: auto;
     margin-top: -505px; }
-    .section3 .section3-background .section3-inner {
+    .section5 .section5-background .section5-inner {
       border-top: 1px solid white;
       border-bottom: 1px solid white;
       color: white;
       font-family: "Playfair Display", serif; }
-      .section3 .section3-background .section3-inner .title {
+      .section5 .section5-background .section5-inner .title {
         font-size: 40px; }
-      .section3 .section3-background .section3-inner .decoration1 {
+      .section5 .section5-background .section5-inner .decoration1 {
         width: 0px;
         height: 0px;
         border: 5px solid transparent;
         border-bottom-color: white;
         margin: auto; }
-      .section3 .section3-background .section3-inner .decoration2 {
+      .section5 .section5-background .section5-inner .decoration2 {
         width: 0px;
         height: 0px;
         border: 5px solid transparent;
         border-top-color: white;
         margin: auto; }
-    .section3 .section3-background .section3-box {
+    .section5 .section5-background .section5-box {
       border: 1px solid white;
+      text-align: center;
       width: 300px;
       margin: auto; }
 
-.section4 {
+.section6 {
   background-color: #f1f1e9;
   padding: 20px; }
-  .section4 .section4-inner {
+  .section6 .section6-inner {
     width: 45%;
     font-size: 20px;
     margin: 50px; }
-  .section4 .section4-title {
+  .section6 .section6-title {
     font-size: 50px; }
-    .section4 .section4-title .title-change {
-      color: red;
+    .section6 .section6-title .title-change {
+      color: #730004;
       letter-spacing: 0.2em; }
-  .section4 .section4-content {
+  .section6 .section6-content {
     text-align: left;
     letter-spacing: 0.2em; }
-  .section4 .section4-box {
+  .section6 .section6-box {
     width: 300px;
-    margin-top: 20px;
-    border: 1px solid black;
+    border: 1px solid #000;
     text-align: center;
     font-weight: bold;
     margin-left: 50px;
     font-size: 20px; }
-  .section4 .Calendar {
+  .section6 .Calendar {
     width: 45%;
     height: 350px;
     float: right;
     background-color: white;
     margin-top: -505px; }
-    .section4 .Calendar .style {
-      text-a1lign: center;
+    .section6 .Calendar .style1 {
+      text-align: center;
       width: 81%;
       font-weight: bold;
       font-size: 30px;
@@ -227,7 +345,7 @@
       margin-top: -5px;
       margin: auto;
       margin-top: 130px; }
-    .section4 .Calendar .style2 {
+    .section6 .Calendar .style2 {
       width: 400px;
       text-align: center;
       margin-top: -30px;
@@ -268,13 +386,18 @@
   background-color: #f1f1e9;
   height: 500px;
   padding: 50px 30px 0px 30px;
-  text-align: center; }
+  text-align: center;
+  font-family: "Playfair Display", serif; }
   .footer .box-title {
     font-size: 20px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
     width: 350px;
     margin: auto; }
+    .footer .box-title .p1 {
+      color: #730004; }
+    .footer .box-title .p2 {
+      margin-left: -4px; }
   .footer .box-content {
     font-size: 20px; }
     .footer .box-content .decoration1 {

@@ -3,7 +3,7 @@ $font-size50: 50px
 $font-size20: 20px
 
 @mixin click-border-b
-	border: 1px solid black
+	border: 1px solid #000
 	text-align: center
 	font-weight: bold
 
@@ -55,7 +55,15 @@ $font-size20: 20px
 			float: right
 			font-size: $font-size20
 			font-weight: bold
-
+			.line
+				position: absolute
+				bottom: 50%
+				width: 100px
+				height: 1px
+				background-color: black
+				display: block;
+				margin-top: -0px
+				margin-left: 5px
 
 
 
@@ -78,9 +86,9 @@ $font-size20: 20px
 
 .section1
 	background-color: $bg-color
-	padding: 20px
+	padding: 50px 20px 40px 0px
 	.section1-pic
-		margin-left: 20px
+		margin-top: 10px
 		img
 			z-index: 2
 			width: 75%
@@ -102,31 +110,32 @@ $font-size20: 20px
 			padding: 50px 20px 50px 20px
 			line-height: 1.5
 			div
-				border-top: 1px solid black
 				text-align: center
 			.decoration1
 				@include decoration1
 			.decoration2
 				@include decoration2
 			.section-content-logo
+				border-top: 1px solid black
 				.content
-					border-top: 1px solid black
 					text-align: center
 				.content-logo
 					width: 250px
 			p
 				text-align: center
 
+
 .section2
 	background-color: $bg-color
-	padding: 50px 20px 50px 100px
+	padding: 150px 20px 150px 100px
 	.section2-pic
 		width: 75%
 		float: right
 		margin-top: 50px
 	.section2-pic1
-		width: 60%
-		float: right
+		width: 30%
+		margin-left: 450px
+		margin-top: -100px
 	.section2-inner
 		width: 28%
 		text-align: center
@@ -134,11 +143,11 @@ $font-size20: 20px
 			border-top: 1px solid black
 			font-size: $font-size50
 			font-family: "Playfair Display", serif
+			margin-left: 30px
 			.title1
-				color: red
+				color: #730004
 				display: inline
 			.title2
-				color: green
 				display: inline
 		.decoration1
 			@include decoration1
@@ -159,13 +168,124 @@ $font-size20: 20px
 			height: 50px
 			font-size: 15px
 
+
 .section3
 	background-color: $bg-color
-	padding: 150px 0px 100px 0px
+	padding: 50px 20px 50px 0px
+	.section3-pic1
+		width: 60%
+	.section3-pic2
+		width: 23%
+		margin-left: -650px
+		margin-bottom: -100px
+	.section3-inner
+		text-align: center
+		width: 30%
+		padding: 20px	
+		float: right
+		margin: auto
+		margin-right: 50px
+		margin-top: 70px
+		.section3-title
+			font-size: 50px
+			font-family: "Playfair Display", serif
+			border-top: 1px solid black
+			width: 300px
+			margin: auto
+			.p1
+				color: #730004
+				display: inline
+			.p2	
+				display: inline
+				margin-left: -10px
+		.decoration1
+				@include decoration1
+		.decoration2
+				@include decoration2
+		.new-content
+			font-weight: bold
+			.p1
+				font-size: 20px
+			.p2
+				font-size: 15px
+		
+		.section3-box
+			@include click-border-b
+			width: 300px
+			margin: auto
+
+.section4
+	background-color: $bg-color
+	padding: 270px 50px 10px 30px
+	.section4-inner
+		padding: 30px
+		width: 31%
+		font-family: "Playfair Display", serif
+		.title
+			border-top: 1px solid black
+			font-size: $font-size50
+			font-weight: bold
+			width: 250px
+			text-align: center
+			margin: auto
+			.p1
+				color: #730004
+			.p2
+				margin-left: -10px
+		.decoration
+			padding: 10px
+			.decoration1
+				@include decoration1
+			.decoration2	
+				@include decoration2	
+
+		.content
+			font-weight: normal
+			font-size: 15px
+			text-align: center
+		.section4-box
+			@include click-border-b
+			width: 300px
+			margin: auto
+	.section4-pic
+		float: right
+		width: 60%
+		margin-top: -600px
+		.section4-pic1
+			width: 45%
+			margin-left: 290px
+			position: relative
+		.section4-pic2
+			margin-top: -135px
+			width: 100%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section5
+	background-color: $bg-color
+	padding: 150px 0px 0px 0px
 	text-align: center
 	width: 100%
 
-	.section3-pic
+	.section5-pic
 		background-color: #f1f1e9
 		width: 100%
 		display: inline-block
@@ -176,13 +296,13 @@ $font-size20: 20px
 			overflow: hidden
 			display: inline-block		
 		.img-1
-			background-image: url("file:///Users/jamesliu/test2/img/section3-left.png")
+			background-image: url("file:///Users/jamesliu/test2/img/section5-left.png")
 			background-repeat: no-repeat
 
 		.img-2
 			background-image: url("https://www.tenda.jp/wp-content/themes/latendarossa-html/dist/assets/images/top/pic10.png")
 			background-repeat: no-repeat
-	.section3-background
+	.section5-background
 		width: 400px
 		padding: 100px
 		background-color: rgba(0, 0, 0, 0.8)
@@ -190,7 +310,7 @@ $font-size20: 20px
 		height: 300px
 		margin: auto
 		margin-top: -505px
-		.section3-inner
+		.section5-inner
 			border-top: 1px solid white
 			border-bottom: 1px solid white
 			color: white
@@ -211,30 +331,30 @@ $font-size20: 20px
 				border: 5px solid transparent
 				border-top-color: white
 				margin: auto				
-		.section3-box
-			border: 1px solid white
+		.section5-box
+			@include click-border-w
 			width: 300px
 			margin: auto
-.section4
+
+.section6
 	background-color: $bg-color
 	padding: 20px
-	.section4-inner
+	.section6-inner
 		width: 45%
 		font-size: $font-size20
 		margin: 50px
-	.section4-title
+	.section6-title
 		font-size: $font-size50
 		.title-change
-			color: red
+			color: #730004
 			letter-spacing: 0.2em
 
-	.section4-content
+	.section6-content
 		text-align: left
 		letter-spacing: 0.2em
 
-	.section4-box
+	.section6-box
 		width: 300px
-		margin-top: 20px
 		@include click-border-b
 		margin-left: 50px
 		font-size: $font-size20
@@ -244,8 +364,8 @@ $font-size20: 20px
 		float: right
 		background-color: white
 		margin-top: -505px
-		.style
-			text-a1lign: center
+		.style1
+			text-align: center
 			width: 81%
 			font-weight: bold
 			font-size: 30px
@@ -297,15 +417,19 @@ $font-size20: 20px
 	height: 500px
 	padding: 50px 30px 0px 30px
 	text-align: center
+	font-family: "Playfair Display", serif
 	.box-title
 		font-size: $font-size20
 		border-top: 1px solid black
 		border-bottom: 1px solid black
 		width: 350px
 		margin: auto	
+		.p1
+			color: #730004
+		.p2
+			margin-left: -4px
 	.box-content
 		font-size: $font-size20
-		.decoration
 		.decoration1
 			@include decoration1
 		.decoration2
