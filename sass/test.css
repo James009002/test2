@@ -13,7 +13,7 @@
     display: inline-block;
     margin-top: 45px; }
     .header .menu-logo img {
-      width: 50%;
+      width: 100%;
       margin-left: -150px; }
   .header .menu-content {
     display: inline-block;
@@ -435,7 +435,8 @@
       margin-left: 20px; }
   .footer .copyright {
     font-size: 10px; }
-          @media screen and (min-width: 400px) and (max-width:968px){
+        
+      @media screen and (min-width: 400px) and (max-width:968px){
 
 .header .menu-content div{
 
@@ -618,3 +619,4 @@ margin-bottom:  0px
   line-height: 2.75
 
 }
+
