@@ -1,7 +1,22 @@
 
 $bg-color: #f1f1e9
+$title-color: #730004
 $font-size50: 50px
 $font-size20: 20px
+$font-size16: 16px
+
+@mixin rotate-div
+	width: 10px
+	height: 10px
+	transform: rotate(45deg)
+	background-color: red
+	margin: auto
+	margin-bottom: 30px
+
+@mixin box-style
+	border: 1px solid black
+	height: 50px
+	font-size: 30px
 
 @mixin click-border-b
 	border: 1px solid #000
@@ -26,6 +41,16 @@ $font-size20: 20px
 	border-top-color: red
 	margin: auto
 
+@mixin breakpoint($point)
+	@if $point == pc
+		@media only screen and (max-width: 1024px)
+			@content 
+	@else if $point == pad 
+		@media only screen and (max-width: 768px)  
+			@content 
+	@else if $point == mobile 
+		@media only screen and (max-width: 320px)   
+			@content 
 
 
 .header
@@ -39,6 +64,8 @@ $font-size20: 20px
 	text-align: center
 	margin-left: -10px
 	margin-top: -10px
+	@include breakpoint(pad)
+		width: 100%
 	.menu-button
 		width: 0px
 		height: 0px
@@ -52,6 +79,7 @@ $font-size20: 20px
 		img
 			width: 100%
 			margin-left: -150px	
+
 	.menu-content
 		display: inline-block
 		font-family: "Roboto", sans-serif
@@ -86,15 +114,15 @@ $font-size20: 20px
 
 		
 
-.section1
+.la-TendaRossa
 	background-color: $bg-color
 	padding: 50px 20px 40px 0px
-	.section1-pic
+	.la-TendaRossa-pic
 		margin-top: 10px
 		z-index: 2
 		width: 75%
 
-	.section1-inner
+	.la-TendaRossa-inner
 		position: relative
 		margin-left: 10%
 		margin-top: -50px
@@ -110,167 +138,152 @@ $font-size20: 20px
 			margin-top: -500px
 			padding: 50px 20px 50px 20px
 			line-height: 1.5
+			font-size: 19px
 			div
 				text-align: center
-			.decoration1
-				@include decoration1
-			.decoration2
-				@include decoration2
+			.rotate-div
+				@include rotate-div
 			.section-content-logo
 				border-top: 1px solid black
-				.content
-					text-align: center
+				img
+					width: 45%
+			.content
+				text-align: center
+				padding-top: 50px
+				.rotate-div
+					@include rotate-div
+					margin-top: 50px
 				.content-logo
 					width: 250px
 			p
 				text-align: center
 
-
-.section2
+.DISH
 	background-color: $bg-color
-	padding: 150px 20px 150px 100px
-	.section2-pic
-		width: 75%
-		float: right
-		margin-top: 50px
-	.section2-pic1
-		width: 30%
-		margin-left: 450px
-		margin-top: -100px
-	.section2-inner
-		width: 28%
+	padding: 50px
+	position: relative
+	.inner
 		text-align: center
-		.section2-title
-			border-top: 1px solid black
+		width: 25%
+		display: inline-block
+		padding: 30px
+		.title
 			font-size: $font-size50
 			font-family: "Playfair Display", serif
-			margin-left: 30px
-			.title1
-				color: #730004
-				display: inline
-			.title2
-				display: inline
+			margin-bottom: 0px
+			border-top: 1px solid black	
+		.title::first-letter
+			color: $title-color
+		.rotate-div
+			@include rotate-div
+		.content
+			font-size: $font-size16
+			.black
+				font-weight: bolder
+		.box
+			@include box-style
+			margin-top: 15px
+		
+	.DISH-pic
+		display: inline-block
+		width: 65%
+	.DISH-pic1
+		position: absolute
+		width: 25%
+		display: inline-block
+		left: 60%
+		display: flex
+		margin-top: -15%
+
+
+
+
+.WINE
+	position: relative
+	background-color: $bg-color
+	padding: 50px 100px 50px 50px
+	height: 450px
+	.WINE-pic
+		width: 60%
+		position: absolute
+		display: inline-block
+	.WINE-pic1
+		position: relative
+		width: 25%
+		left: 10%
+		top: 250px
+
+	.inner
+		position: relative
+		width: 28%
+		text-align: center
+		display: inline-block
+		float: right
+		margin-top: 100px
+		.rotate-div
+			@include rotate-div
+		.title
+			font-size: $font-size50
+			font-family: "Playfair Display", serif
+			margin-bottom: 0px	
+			border-top: 1px solid black		
+		.title::first-letter
+			color: $title-color
 		.decoration1
 			@include decoration1
 		.decoration2
 			@include decoration2
-
-
-		.section2-content
-			font-size: 16px
-			font-weight: bold
-			.p2
-				font-weight: normal
-				font-size: 14px
-
-		.section2-box
-			@include click-border-b
-			margin: 10px		
-			height: 50px
-			font-size: 15px
-
-
-.section3
-	background-color: $bg-color
-	padding: 50px 20px 50px 0px
-	.section3-pic1
-		width: 60%
-	.section3-pic2
-		width: 23%
-		margin-left: -650px
-		margin-bottom: -100px
-	.section3-inner
-		text-align: center
-		width: 30%
-		padding: 20px	
-		float: right
-		margin: auto
-		margin-right: 50px
-		margin-top: 70px
-		.section3-title
-			font-size: 50px
-			font-family: "Playfair Display", serif
-			border-top: 1px solid black
-			width: 300px
-			margin: auto
-			.p1
-				color: #730004
-				display: inline
-			.p2	
-				display: inline
-				margin-left: -10px
-		.decoration1
-				@include decoration1
-		.decoration2
-				@include decoration2
-		.new-content
-			font-weight: bold
-			.p1
-				font-size: 20px
-			.p2
-				font-size: 15px
-		
-		.section3-box
-			@include click-border-b
-			width: 300px
-			margin: auto
-
-.section4
-	background-color: $bg-color
-	padding: 180px 50px 10px 30px
-	.section4-pic
-		float: right
-		width: 46%
-
-	.section4-inner
-		padding: 30px
-		width: 31%
-		font-family: "Playfair Display", serif
-		.title
-			border-top: 1px solid black
-			font-size: $font-size50
-			font-weight: bold
-			width: 250px
-			text-align: center
-			margin: auto
-			.p1
-				color: #730004
-			.p2
-				margin-left: -10px
-		.decoration
-			padding: 10px
-			.decoration1
-				@include decoration1
-			.decoration2	
-				@include decoration2	
-
 		.content
-			font-weight: normal
-			font-size: 15px
-			text-align: center
-		.section4-box
-			@include click-border-b
-			width: 300px
-			margin: auto
-	.section4-pic
-		float: right
-		width: 60%
-		margin-top: 0%
-		.section4-pic1
-			float: right
-			position: relative
-			margin-top: -20%
-			width: 40%
-			margin-right: 15%
-		.section4-pic2
-			margin-top: -120px
-			width: 100%
+			font-size: $font-size16
+		.box
+			margin-top: 30px
+			@include box-style
 
-
-
-.section5
+.PARTY
 	background-color: $bg-color
-	padding: 200px 0px 0px 0px
+	position: relative
+	padding: 25px
+	.inner
+		position: relative
+		text-align: center
+		width: 25%
+		display: inline-block
+		padding: 30px
+		vertical-align: bottom
+
+		.title
+			font-size: $font-size50
+			font-family: "Playfair Display", serif
+			margin-bottom: 0px
+			border-top: 1px solid black	
+		.title::first-letter
+			color: $title-color
+		.rotate-div
+			@include rotate-div
+		.content
+			font-size: $font-size16
+		.box
+			margin-top: 30px
+			@include box-style	
+
+	.PARTY-pic
+		display: inline-block
+		width: 65%
+
+	.PARTY-pic1
+		position: absolute
+		width: 25%
+		display: inline-block
+		left: 60%
+		display: flex
+		margin-top: -15%
+
+
+
+
+.slidebar
+	background-color: $bg-color
+	padding: 100px 0px 0px 0px
 	text-align: center
 	width: 100%
 	.img-1
@@ -291,7 +304,7 @@ $font-size20: 20px
 		margin-left: 49%
 		.img-2-1
 			width: 49%
-			height: 500px
+			height: 498px
 			background-position: center
 			overflow: hidden
 			display: inline-block			
@@ -302,7 +315,7 @@ $font-size20: 20px
 			display: inline-block
 			margin-top: -505px
 
-	.section5-background
+	.slidebar-background
 		width: 33%
 		padding: 100px
 		background-color: rgba(0, 0, 0, 0.8)
@@ -310,11 +323,16 @@ $font-size20: 20px
 		height: 300px
 		margin: auto
 		margin-top: -505px
-		.section5-inner
+		.slidebar-inner
 			border-top: 1px solid white
 			border-bottom: 1px solid white
 			color: white
 			font-family: "Playfair Display", serif		
+			line-height: 2
+			.rotate-div
+				@include rotate-div
+				background-color: white
+				margin-top: 15px
 			.title
 				font-size: 40px
 
@@ -331,29 +349,31 @@ $font-size20: 20px
 				border: 5px solid transparent
 				border-top-color: white
 				margin: auto				
-		.section5-box
+		.box
 			@include click-border-w
 			width: 300px
 			margin: auto
 
-.section6
+.NEWS
 	background-color: $bg-color
 	padding: 20px
-	.section6-inner
+	line-height: 2
+	.inner
 		width: 45%
 		font-size: $font-size20
 		margin: 50px
-	.section6-title
+
+	.title
 		font-size: $font-size50
 		.title-change
 			color: #730004
 			letter-spacing: 0.2em
 
-	.section6-content
+	.content
 		text-align: left
 		letter-spacing: 0.2em
 
-	.section6-box
+	.box
 		width: 300px
 		@include click-border-b
 		margin-left: 50px
@@ -363,7 +383,7 @@ $font-size20: 20px
 		height: 350px
 		float: right
 		background-color: white
-		margin-top: -505px
+		margin-top: -400px
 		.style1
 			text-align: center
 			width: 81%
@@ -396,6 +416,7 @@ $font-size20: 20px
 		width: 300px
 		margin: auto
 	.access-inner
+		line-height: 2
 		float: right
 		color: white
 		margin-top: -430px
@@ -404,6 +425,8 @@ $font-size20: 20px
 		div
 			overflow: hidden
 			font-family: "Playfair Display", serif
+			font-size: 20px
+			margin-top: 10%
 			.title
 				width: 100px
 				float: left
@@ -415,7 +438,7 @@ $font-size20: 20px
 
 .footer
 	background-color: $bg-color
-	height: 500px
+	height: 350px
 	padding: 50px 30px 0px 30px
 	text-align: center
 	font-family: "Playfair Display", serif
@@ -431,10 +454,11 @@ $font-size20: 20px
 			margin-left: -4px
 	.box-content
 		font-size: $font-size20
-		.decoration1
-			@include decoration1
-		.decoration2
-			@include decoration2
+		line-height: 2.2
+		.rotate-div
+			@include rotate-div
+			margin-bottom: 0px
+			margin-top: 10px
 	.our-phone
 		font-size: $font-size50
 	.Community
@@ -446,8 +470,6 @@ $font-size20: 20px
 			margin-left: 20px
 	.copyright
 		font-size: 10px
-
-
 
 
 
