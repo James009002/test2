@@ -71,6 +71,10 @@
           .header .menu-content div .line {
             display: none; } }
 
+.rolling-click {
+  position: flexd;
+  top: 200px; }
+
 .container {
   background-color: #f1f1e9; }
   .container .container-pic {
@@ -122,7 +126,8 @@
     @media only screen and (max-width: 930px) {
       .la-TendaRossa .la-TendaRossa-inner {
         margin-top: 0px;
-        margin-left: 0px; } }
+        margin-left: 0px;
+        line-height: 1.5; } }
     .la-TendaRossa .la-TendaRossa-inner .section-content {
       position: relative;
       float: right;
@@ -239,10 +244,14 @@
       margin-bottom: 30px; }
     .DISH .inner .content {
       font-size: 16px; }
+      @media only screen and (max-width: 930px) {
+        .DISH .inner .content {
+          line-height: 1.5; } }
       @media only screen and (max-width: 367px) {
         .DISH .inner .content {
           width: 80%;
-          margin: auto; } }
+          margin: auto;
+          line-height: 1.5; } }
       .DISH .inner .content .black {
         font-weight: bolder; }
     .DISH .inner .box {
@@ -312,7 +321,8 @@
         width: 100%;
         margin: auto;
         float: none;
-        margin-top: 50px; } }
+        margin-top: 50px;
+        line-height: 1.5; } }
     .WINE .inner .rotate-div {
       width: 10px;
       height: 10px;
@@ -355,7 +365,7 @@
         .WINE .inner .content {
           width: 50%;
           margin: auto;
-          line-height: 2; } }
+          line-height: 1.5; } }
       @media only screen and (max-width: 367px) {
         .WINE .inner .content {
           width: 80%; } }
@@ -400,10 +410,14 @@
     vertical-align: bottom; }
     @media only screen and (max-width: 930px) {
       .PARTY .inner {
+        line-height: 1.5;
         width: 100%;
         padding: 0px;
         margin: auto;
         margin: 50px 0px 50px 0px; } }
+    @media only screen and (max-width: 367px) {
+      .PARTY .inner {
+        line-height: 1.5; } }
     .PARTY .inner .title {
       font-size: 50px;
       font-family: "Playfair Display", serif;

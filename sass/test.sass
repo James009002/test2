@@ -143,6 +143,11 @@ $font-size16: 16px
 				@include breakpoint(mobile)
 					display: none	
 
+.rolling-click
+
+	position: flexd
+	top: 200px
+	
 
 
 
@@ -196,6 +201,7 @@ $font-size16: 16px
 		@include breakpoint(pad)
 			margin-top: 0px
 			margin-left: 0px
+			line-height: 1.5
 		.section-content	
 			position: relative
 			float: right
@@ -276,9 +282,13 @@ $font-size16: 16px
 			@include rotate-div
 		.content
 			font-size: $font-size16
+			@include breakpoint(pad)
+				line-height: 1.5
 			@include breakpoint(mobile)
 				width: 80%
 				margin: auto
+				line-height: 1.5
+
 			.black
 				font-weight: bolder
 		.box
@@ -395,6 +405,7 @@ $font-size16: 16px
 			margin: auto
 			float: none
 			margin-top: 50px
+			line-height: 1.5
 		.rotate-div
 			@include rotate-div
 		.title
@@ -415,7 +426,7 @@ $font-size16: 16px
 			@include breakpoint(pad)
 				width: 50%
 				margin: auto
-				line-height: 2
+				line-height: 1.5
 			@include breakpoint(mobile)
 				width: 80%
 		.box
@@ -451,10 +462,13 @@ $font-size16: 16px
 		padding: 30px
 		vertical-align: bottom
 		@include breakpoint(pad)
+			line-height: 1.5
 			width: 100%
 			padding: 0px
 			margin: auto
 			margin: 50px 0px 50px 0px
+		@include breakpoint(mobile)
+			line-height: 1.5
 
 		.title
 			font-size: $font-size50
@@ -710,18 +724,6 @@ $font-size16: 16px
 
 	.access-title
 		font-size: $font-size50
-.rolling-clock
-	position:fixed;
-	z-index:90;
-	right:3%;
-	bottom:5%;
-	display:none;
-	width:50px;
-	height:50px;
-	float: right
-		    
-	
-
 
 .footer
 	background-color: $bg-color
