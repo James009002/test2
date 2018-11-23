@@ -27,6 +27,7 @@
 				<div>HOME</div>
 			</div>
 		</div>
+		<i class="fas fa-align-justify" id="choose-click"></i>
 	</div>
 
 	<div class="container">
@@ -43,7 +44,6 @@
 			<img src="img/section1-pic.png" class="la-TendaRossa-pic">
 		</div>
 		<div class="la-TendaRossa-inner">
-			<img src="img/section1-pic1.png">
 			<div class="rotate-div"></div>
 			<div class="section-content">
 				<div class="section-content-logo">
@@ -66,6 +66,9 @@
 					<div class="rotate-div"></div>
 				</div>
 			</div>
+		</div>
+		<div class="la-TendaRossa-pic1">
+			<img src="img/section1-pic1.png">
 		</div>
 	</div>
 
@@ -96,9 +99,9 @@
 
 
 
+
 	<div class="WINE">
 		<img src="img/section3-pic.png" class="WINE-pic">
-		<img src="img/section3-pic1.png" class="WINE-pic1">
 		<div class="inner">
 			<p class="title">WINE</p>
 			<div class="rotate-div"></div>
@@ -112,10 +115,11 @@
 				<p>More</p>
 			</div>	
 		</div>
-
+		<img src="img/section3-pic1.png" class="WINE-pic1">
 	</div>
 
 	<div class="PARTY">
+		<img src="img/section4-pic.png" class="PARTY-pic">
 		<div class="inner">
 			<p class="title">PARTY</p>
 			<div class="rotate-div"></div>
@@ -127,11 +131,8 @@
 				<p>More</p>
 			</div>
 		</div>
-		<img src="img/section4-pic.png" class="PARTY-pic">
 		<img src="img/section4-pic1.png" class="PARTY-pic1">
 	</div>
-
-
 
 
 
@@ -225,7 +226,11 @@
 		</div>
 	</div>
 
-
+	<div class="rolling-click">
+		<a href="http://restaurant.novarese.jp/yhm/wp-content/themes/yhm-2017/img/common/pagetop.jpg" id="gotop"style="z-index:10">
+					<img src="http://restaurant.novarese.jp/yhm/wp-content/themes/yhm-2017/img/common/pagetop.jpg">
+				</a>
+	</div>
 
 
 
@@ -256,6 +261,19 @@
 
 
 	</body>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#choose-click").click(function(){
+				$(".menu-content").slideToggle(1000)
+			});
+		});
+		$(document).ready(function(){
+			$(".menu-content").click(function(){
+				$("#choose-click").hide(2000)
+			});
+		});
+	</script>
 
 
 </html>

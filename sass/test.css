@@ -9,9 +9,20 @@
   text-align: center;
   margin-left: -10px;
   margin-top: -10px; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 930px) {
     .header {
       width: 100%; } }
+  .header i {
+    display: none; }
+    @media only screen and (max-width: 930px) {
+      .header i {
+        display: inline;
+        float: right;
+        margin-top: 50px;
+        margin-right: 10px; } }
+    @media only screen and (max-width: 367px) {
+      .header i {
+        margin-right: 20px; } }
   .header .menu-button {
     width: 0px;
     height: 0px;
@@ -25,9 +36,20 @@
     .header .menu-logo img {
       width: 100%;
       margin-left: -150px; }
+      @media only screen and (max-width: 930px) {
+        .header .menu-logo img {
+          width: 130%; } }
+      @media only screen and (max-width: 367px) {
+        .header .menu-logo img {
+          width: 100%;
+          float: right;
+          margin-left: -100px; } }
   .header .menu-content {
     display: inline-block;
     font-family: "Roboto", sans-serif; }
+    @media only screen and (max-width: 930px) {
+      .header .menu-content {
+        display: none; } }
     .header .menu-content div {
       width: 110px;
       float: right;
@@ -42,31 +64,65 @@
         display: block;
         margin-top: -0px;
         margin-left: 5px; }
+        @media only screen and (max-width: 930px) {
+          .header .menu-content div .line {
+            display: none; } }
+        @media only screen and (max-width: 367px) {
+          .header .menu-content div .line {
+            display: none; } }
 
 .container {
   background-color: #f1f1e9; }
   .container .container-pic {
-    z-index: 1;
-    float: right; }
+    z-index: 1; }
+    .container .container-pic img {
+      width: 80%;
+      float: right; }
+      @media only screen and (max-width: 930px) {
+        .container .container-pic img {
+          width: 100%;
+          margin-top: 30px; } }
   .container .container-text {
     position: relative;
     z-index: 2;
     margin-left: 50px;
-    top: -340px; }
+    top: -300px; }
+    @media only screen and (max-width: 930px) {
+      .container .container-text {
+        top: 0px; } }
+    @media only screen and (max-width: 930px) {
+      .container .container-text img {
+        margin: 30px;
+        width: 70%; } }
+    @media only screen and (max-width: 367px) {
+      .container .container-text img {
+        margin: 0px;
+        width: 100%;
+        margin-left: -30px;
+        padding: 20px 0px 20px 0px; } }
 
 .la-TendaRossa {
   background-color: #f1f1e9;
   padding: 50px 20px 40px 0px; }
+  @media only screen and (max-width: 930px) {
+    .la-TendaRossa {
+      padding: 0px; } }
   .la-TendaRossa .la-TendaRossa-pic {
     margin-top: 10px;
     z-index: 2;
-    width: 75%; }
+    width: 85%; }
+    @media only screen and (max-width: 930px) {
+      .la-TendaRossa .la-TendaRossa-pic {
+        width: 100%;
+        margin-top: 0px; } }
   .la-TendaRossa .la-TendaRossa-inner {
     position: relative;
     margin-left: 10%;
     margin-top: -50px; }
-    .la-TendaRossa .la-TendaRossa-inner img {
-      width: 25%; }
+    @media only screen and (max-width: 930px) {
+      .la-TendaRossa .la-TendaRossa-inner {
+        margin-top: 0px;
+        margin-left: 0px; } }
     .la-TendaRossa .la-TendaRossa-inner .section-content {
       position: relative;
       float: right;
@@ -74,10 +130,17 @@
       height: 450px;
       background-color: white;
       left: -10%;
-      margin-top: -500px;
+      margin-top: -300px;
       padding: 50px 20px 50px 20px;
       line-height: 1.5;
-      font-size: 19px; }
+      font-size: 16px; }
+      @media only screen and (max-width: 930px) {
+        .la-TendaRossa .la-TendaRossa-inner .section-content {
+          width: 100%;
+          margin-top: 0px;
+          float: none;
+          left: 0px;
+          padding: 0px; } }
       .la-TendaRossa .la-TendaRossa-inner .section-content div {
         text-align: center; }
       .la-TendaRossa .la-TendaRossa-inner .section-content .rotate-div {
@@ -90,12 +153,30 @@
         margin: auto;
         margin-bottom: 30px; }
       .la-TendaRossa .la-TendaRossa-inner .section-content .section-content-logo {
-        border-top: 1px solid black; }
+        width: auto;
+        border-top: 1px solid black;
+        margin: auto; }
+        @media only screen and (max-width: 930px) {
+          .la-TendaRossa .la-TendaRossa-inner .section-content .section-content-logo {
+            width: 50%; } }
         .la-TendaRossa .la-TendaRossa-inner .section-content .section-content-logo img {
           width: 45%; }
+          @media only screen and (max-width: 930px) {
+            .la-TendaRossa .la-TendaRossa-inner .section-content .section-content-logo img {
+              width: 100%; } }
+          @media only screen and (max-width: 367px) {
+            .la-TendaRossa .la-TendaRossa-inner .section-content .section-content-logo img {
+              width: 100%; } }
       .la-TendaRossa .la-TendaRossa-inner .section-content .content {
         text-align: center;
         padding-top: 50px; }
+        @media only screen and (max-width: 930px) {
+          .la-TendaRossa .la-TendaRossa-inner .section-content .content {
+            padding: 10px; } }
+        @media only screen and (max-width: 367px) {
+          .la-TendaRossa .la-TendaRossa-inner .section-content .content {
+            font-size: 15px;
+            padding: 10px; } }
         .la-TendaRossa .la-TendaRossa-inner .section-content .content .rotate-div {
           width: 10px;
           height: 10px;
@@ -110,21 +191,41 @@
           width: 250px; }
       .la-TendaRossa .la-TendaRossa-inner .section-content p {
         text-align: center; }
+  .la-TendaRossa .la-TendaRossa-pic1 img {
+    width: 20%;
+    margin-left: 30px; }
+    @media only screen and (max-width: 930px) {
+      .la-TendaRossa .la-TendaRossa-pic1 img {
+        width: 35%;
+        margin-top: 30px; } }
 
 .DISH {
   background-color: #f1f1e9;
-  padding: 50px;
-  position: relative; }
+  padding: 100px 0px 100px 0px; }
+  @media only screen and (max-width: 930px) {
+    .DISH {
+      padding: 0px; } }
   .DISH .inner {
     text-align: center;
     width: 25%;
     display: inline-block;
-    padding: 30px; }
+    padding: 30px 10px 20px 20px;
+    margin-top: 50px; }
+    @media only screen and (max-width: 930px) {
+      .DISH .inner {
+        width: 100%;
+        padding: 0px;
+        margin-bottom: 30px; } }
     .DISH .inner .title {
       font-size: 50px;
       font-family: "Playfair Display", serif;
       margin-bottom: 0px;
-      border-top: 1px solid black; }
+      width: auto;
+      border-top: 1px solid black;
+      margin: auto; }
+      @media only screen and (max-width: 930px) {
+        .DISH .inner .title {
+          width: 50%; } }
     .DISH .inner .title::first-letter {
       color: #730004; }
     .DISH .inner .rotate-div {
@@ -138,47 +239,80 @@
       margin-bottom: 30px; }
     .DISH .inner .content {
       font-size: 16px; }
+      @media only screen and (max-width: 367px) {
+        .DISH .inner .content {
+          width: 80%;
+          margin: auto; } }
       .DISH .inner .content .black {
         font-weight: bolder; }
     .DISH .inner .box {
       border: 1px solid black;
-      height: 50px;
       font-size: 30px;
-      margin-top: 15px; }
+      margin: auto;
+      margin-top: 20px; }
+      @media only screen and (max-width: 930px) {
+        .DISH .inner .box {
+          width: 300px; } }
+      @media only screen and (max-width: 367px) {
+        .DISH .inner .box {
+          width: 250px; } }
   .DISH .DISH-pic {
     display: inline-block;
-    width: 65%; }
+    margin-left: 50px;
+    width: 65%;
+    position: absolute; }
+    @media only screen and (max-width: 930px) {
+      .DISH .DISH-pic {
+        width: 100%;
+        margin-left: 0px; } }
   .DISH .DISH-pic1 {
-    position: absolute;
-    width: 25%;
+    position: relative;
+    width: 22%;
     display: inline-block;
-    left: 60%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: -15%; }
+    float: right;
+    margin-top: 20%;
+    margin-right: 10%;
+    z-index: 19; }
+    @media only screen and (max-width: 930px) {
+      .DISH .DISH-pic1 {
+        width: 35%;
+        margin-top: 0px;
+        margin-left: -30px;
+        margin-bottom: 10px;
+        margin-top: 55%;
+        position: relative; } }
 
 .WINE {
-  position: relative;
+  padding: 30px;
   background-color: #f1f1e9;
-  padding: 50px 100px 50px 50px;
-  height: 450px; }
+  padding-bottom: 70px; }
+  @media only screen and (max-width: 930px) {
+    .WINE {
+      padding: 0px; } }
   .WINE .WINE-pic {
-    width: 60%;
-    position: absolute;
-    display: inline-block; }
-  .WINE .WINE-pic1 {
+    width: 65%;
+    position: relative; }
+    @media only screen and (max-width: 930px) {
+      .WINE .WINE-pic {
+        width: 100%; } }
+  .WINE .inner {
+    margin-top: 50px;
     position: relative;
     width: 25%;
-    left: 10%;
-    top: 250px; }
-  .WINE .inner {
-    position: relative;
-    width: 28%;
     text-align: center;
     display: inline-block;
     float: right;
+    margin-right: 50px;
     margin-top: 100px; }
+    @media only screen and (max-width: 930px) {
+      .WINE .inner {
+        width: 100%;
+        margin: auto;
+        float: none;
+        margin-top: 50px; } }
     .WINE .inner .rotate-div {
       width: 10px;
       height: 10px;
@@ -192,7 +326,15 @@
       font-size: 50px;
       font-family: "Playfair Display", serif;
       margin-bottom: 0px;
-      border-top: 1px solid black; }
+      width: auto;
+      border-top: 1px solid black;
+      margin: auto; }
+      @media only screen and (max-width: 930px) {
+        .WINE .inner .title {
+          width: 50%; } }
+      @media only screen and (max-width: 367px) {
+        .WINE .inner .title {
+          margin-top: 20px; } }
     .WINE .inner .title::first-letter {
       color: #730004; }
     .WINE .inner .decoration1 {
@@ -209,28 +351,69 @@
       margin: auto; }
     .WINE .inner .content {
       font-size: 16px; }
+      @media only screen and (max-width: 930px) {
+        .WINE .inner .content {
+          width: 50%;
+          margin: auto;
+          line-height: 2; } }
+      @media only screen and (max-width: 367px) {
+        .WINE .inner .content {
+          width: 80%; } }
     .WINE .inner .box {
       margin-top: 30px;
       border: 1px solid black;
-      height: 50px;
-      font-size: 30px; }
+      font-size: 30px;
+      margin: auto;
+      height: auto; }
+      @media only screen and (max-width: 930px) {
+        .WINE .inner .box {
+          width: 300px; } }
+      @media only screen and (max-width: 367px) {
+        .WINE .inner .box {
+          width: 250px; } }
+  .WINE .WINE-pic1 {
+    position: relative;
+    z-index: 10;
+    margin-left: 100px;
+    margin-top: -100px;
+    width: 22%; }
+    @media only screen and (max-width: 930px) {
+      .WINE .WINE-pic1 {
+        margin-top: 0px;
+        width: 35%;
+        padding-top: 20px;
+        margin-left: 30px;
+        margin-bottom: 10px; } }
 
 .PARTY {
   background-color: #f1f1e9;
-  position: relative;
-  padding: 25px; }
+  position: relative; }
+  @media only screen and (max-width: 930px) {
+    .PARTY {
+      padding: 0px; } }
   .PARTY .inner {
-    position: relative;
+    margin-top: 50px;
     text-align: center;
     width: 25%;
     display: inline-block;
     padding: 30px;
     vertical-align: bottom; }
+    @media only screen and (max-width: 930px) {
+      .PARTY .inner {
+        width: 100%;
+        padding: 0px;
+        margin: auto;
+        margin: 50px 0px 50px 0px; } }
     .PARTY .inner .title {
       font-size: 50px;
       font-family: "Playfair Display", serif;
       margin-bottom: 0px;
-      border-top: 1px solid black; }
+      width: auto;
+      border-top: 1px solid black;
+      margin: auto; }
+      @media only screen and (max-width: 930px) {
+        .PARTY .inner .title {
+          width: 50%; } }
     .PARTY .inner .title::first-letter {
       color: #730004; }
     .PARTY .inner .rotate-div {
@@ -244,31 +427,59 @@
       margin-bottom: 30px; }
     .PARTY .inner .content {
       font-size: 16px; }
+      @media only screen and (max-width: 930px) {
+        .PARTY .inner .content {
+          width: 50%;
+          margin: auto; } }
+      @media only screen and (max-width: 367px) {
+        .PARTY .inner .content {
+          width: 80%; } }
     .PARTY .inner .box {
       margin-top: 30px;
       border: 1px solid black;
-      height: 50px;
-      font-size: 30px; }
+      font-size: 30px;
+      margin: auto; }
+      @media only screen and (max-width: 930px) {
+        .PARTY .inner .box {
+          width: 300px; } }
+      @media only screen and (max-width: 367px) {
+        .PARTY .inner .box {
+          width: 250px; } }
   .PARTY .PARTY-pic {
     display: inline-block;
-    width: 65%; }
+    width: 65%;
+    float: right; }
+    @media only screen and (max-width: 930px) {
+      .PARTY .PARTY-pic {
+        width: 100%; } }
   .PARTY .PARTY-pic1 {
-    position: absolute;
-    width: 25%;
+    position: relative;
+    width: 22%;
     display: inline-block;
-    left: 60%;
+    left: 70%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: -15%; }
+    top: -100px;
+    right: -65%; }
+    @media only screen and (max-width: 930px) {
+      .PARTY .PARTY-pic1 {
+        width: 35%;
+        margin-top: 0px;
+        margin-left: -80px;
+        top: 0px;
+        padding-bottom: 10px; } }
 
 .slidebar {
   background-color: #f1f1e9;
-  padding: 100px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
   text-align: center;
   width: 100%; }
   .slidebar .img-1 {
     width: 49%; }
+    @media only screen and (max-width: 930px) {
+      .slidebar .img-1 {
+        width: 100%; } }
     .slidebar .img-1 .img-1-1 {
       width: 49%;
       height: 500px;
@@ -280,9 +491,17 @@
       background-color: #f1f1e9;
       width: 100%;
       display: inline-block; }
+      @media only screen and (max-width: 930px) {
+        .slidebar .img-1 .img-1-1 {
+          margin: auto;
+          margin-top: 0px; } }
   .slidebar .img-2 {
     margin-top: -17px;
     margin-left: 49%; }
+    @media only screen and (max-width: 930px) {
+      .slidebar .img-2 {
+        margin-left: 0px;
+        margin-top: 0px; } }
     .slidebar .img-2 .img-2-1 {
       width: 49%;
       height: 498px;
@@ -295,6 +514,10 @@
       width: 100%;
       display: inline-block;
       margin-top: -505px; }
+      @media only screen and (max-width: 930px) {
+        .slidebar .img-2 .img-2-1 {
+          width: 100%;
+          margin: auto; } }
   .slidebar .slidebar-background {
     width: 33%;
     padding: 100px;
@@ -303,6 +526,12 @@
     height: 300px;
     margin: auto;
     margin-top: -505px; }
+    @media only screen and (max-width: 930px) {
+      .slidebar .slidebar-background {
+        width: 100%;
+        margin-top: 0px;
+        padding: 0px;
+        height: auto; } }
     .slidebar .slidebar-background .slidebar-inner {
       border-top: 1px solid white;
       border-bottom: 1px solid white;
@@ -320,8 +549,14 @@
         margin-bottom: 30px;
         background-color: white;
         margin-top: 15px; }
+        @media only screen and (max-width: 930px) {
+          .slidebar .slidebar-background .slidebar-inner .rotate-div {
+            margin-top: 0px; } }
       .slidebar .slidebar-background .slidebar-inner .title {
         font-size: 40px; }
+        @media only screen and (max-width: 367px) {
+          .slidebar .slidebar-background .slidebar-inner .title {
+            font-size: 25px; } }
       .slidebar .slidebar-background .slidebar-inner .decoration1 {
         width: 0px;
         height: 0px;
@@ -339,6 +574,9 @@
       text-align: center;
       width: 300px;
       margin: auto; }
+      @media only screen and (max-width: 367px) {
+        .slidebar .slidebar-background .box {
+          width: 250px; } }
 
 .NEWS {
   background-color: #f1f1e9;
@@ -348,6 +586,10 @@
     width: 45%;
     font-size: 20px;
     margin: 50px; }
+    @media only screen and (max-width: 930px) {
+      .NEWS .inner {
+        width: 100%;
+        margin: 0px; } }
   .NEWS .title {
     font-size: 50px; }
     .NEWS .title .title-change {
@@ -357,18 +599,34 @@
     text-align: left;
     letter-spacing: 0.2em; }
   .NEWS .box {
-    width: 300px;
     border: 1px solid #000;
     text-align: center;
     font-weight: bold;
     margin-left: 50px;
-    font-size: 20px; }
+    font-size: 20px;
+    width: 300px; }
+    @media only screen and (max-width: 930px) {
+      .NEWS .box {
+        border: 1px solid black;
+        font-size: 30px;
+        margin: auto; } }
+  @media only screen and (max-width: 930px) and (max-width: 930px) {
+    .NEWS .box {
+      width: 300px; } }
+  @media only screen and (max-width: 930px) and (max-width: 367px) {
+    .NEWS .box {
+      width: 250px; } }
   .NEWS .Calendar {
     width: 45%;
     height: 350px;
     float: right;
     background-color: white;
-    margin-top: -400px; }
+    margin-top: -500px; }
+    @media only screen and (max-width: 930px) {
+      .NEWS .Calendar {
+        width: 100%;
+        margin-top: 0px;
+        display: none; } }
     .NEWS .Calendar .style1 {
       text-align: center;
       width: 81%;
@@ -389,30 +647,58 @@
   width: 100%;
   height: 450px;
   padding-top: 50px; }
+  @media only screen and (max-width: 930px) {
+    .access {
+      height: 1000px; } }
   .access #google-maps {
     position: relative;
     vertical-align: middle;
     width: 60%;
     height: 400px;
     margin-left: 3%; }
+    @media only screen and (max-width: 930px) {
+      .access #google-maps {
+        width: 100%;
+        margin-left: 0; } }
   .access .access-box {
     border: 1px solid white;
     text-align: center;
     font-size: 20px;
     width: 300px;
     margin: auto; }
+    @media only screen and (max-width: 930px) {
+      .access .access-box {
+        float: left;
+        width: 250px; } }
   .access .access-inner {
     line-height: 2;
     float: right;
     color: white;
-    margin-top: -430px;
+    margin-top: -450px;
     margin-right: 100px;
-    width: 40%; }
+    width: 45%; }
+    @media only screen and (max-width: 930px) {
+      .access .access-inner {
+        margin-top: 0px;
+        float: none;
+        width: 100%; } }
+  @media only screen and (max-width: 930px) and (max-width: 367px) {
+    .access .access-inner {
+      margin-left: 0px;
+      width: 100%;
+      padding: 20px 0px 20px 0px; } }
     .access .access-inner div {
       overflow: hidden;
       font-family: "Playfair Display", serif;
       font-size: 20px;
-      margin-top: 10%; }
+      margin-top: 5%;
+      padding-left: 20px; }
+      @media only screen and (max-width: 930px) {
+        .access .access-inner div {
+          font-size: 19px; } }
+      @media only screen and (max-width: 367px) {
+        .access .access-inner div {
+          padding-right: 20px; } }
       .access .access-inner div .title {
         width: 100px;
         float: left; }
@@ -425,12 +711,15 @@
   padding: 50px 30px 0px 30px;
   text-align: center;
   font-family: "Playfair Display", serif; }
+  @media only screen and (max-width: 367px) {
+    .footer {
+      padding: 50px 10px 50px 10px; } }
   .footer .box-title {
     font-size: 20px;
     border-top: 1px solid black;
     border-bottom: 1px solid black;
-    width: 350px;
-    margin: auto; }
+    margin: auto;
+    width: 70%; }
     .footer .box-title .p1 {
       color: #730004; }
     .footer .box-title .p2 {

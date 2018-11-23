@@ -4,7 +4,6 @@ $title-color: #730004
 $font-size50: 50px
 $font-size20: 20px
 $font-size16: 16px
-
 @mixin rotate-div
 	width: 10px
 	height: 10px
@@ -15,8 +14,12 @@ $font-size16: 16px
 
 @mixin box-style
 	border: 1px solid black
-	height: 50px
 	font-size: 30px
+	margin: auto
+	@include breakpoint(pad)
+		width: 300px
+	@include breakpoint(mobile)
+		width: 250px
 
 @mixin click-border-b
 	border: 1px solid #000
@@ -41,15 +44,36 @@ $font-size16: 16px
 	border-top-color: red
 	margin: auto
 
+@mixin border-top
+	width: auto
+	border-top: 1px solid black
+	margin: auto
+	@include breakpoint(pad)
+		width: 50%
+
+@mixin pc-pic
+	width: 65%
+@mixin pc-pic1
+	width: 22%
+@mixin pad-border-top
+	width: 1000px
+@mixin pad-pic
+	width: 100%
+@mixin pad-pic1
+	width: 35%
+
+@mixin inner-top
+	margin-top: 50px
+
 @mixin breakpoint($point)
 	@if $point == pc
 		@media only screen and (max-width: 1024px)
 			@content 
 	@else if $point == pad 
-		@media only screen and (max-width: 768px)  
+		@media only screen and (max-width: 930px)  
 			@content 
 	@else if $point == mobile 
-		@media only screen and (max-width: 320px)   
+		@media only screen and (max-width: 367px)   
 			@content 
 
 
@@ -66,6 +90,15 @@ $font-size16: 16px
 	margin-top: -10px
 	@include breakpoint(pad)
 		width: 100%
+	i
+		display: none
+		@include breakpoint(pad)
+			display: inline
+			float: right
+			margin-top: 50px
+			margin-right: 10px
+		@include breakpoint(mobile)
+			margin-right: 20px
 	.menu-button
 		width: 0px
 		height: 0px
@@ -79,10 +112,18 @@ $font-size16: 16px
 		img
 			width: 100%
 			margin-left: -150px	
+			@include breakpoint(pad)
+				width: 130%
+			@include breakpoint(mobile)
+				width: 100%
+				float: right
+				margin-left: -100px
 
 	.menu-content
 		display: inline-block
 		font-family: "Roboto", sans-serif
+		@include breakpoint(pad)
+			display: none
 		div
 			width: 110px
 			float: right
@@ -97,6 +138,11 @@ $font-size16: 16px
 				display: block;
 				margin-top: -0px
 				margin-left: 5px
+				@include breakpoint(pad)
+					display: none
+				@include breakpoint(mobile)
+					display: none	
+
 
 
 
@@ -105,29 +151,51 @@ $font-size16: 16px
 	background-color: $bg-color
 	.container-pic
 		z-index: 1
-		float: right
+		img
+			width: 80%
+			float: right
+			@include breakpoint(pad)
+				@include pad-pic
+				margin-top: 30px
+			@include breakpoint(mobile)
 	.container-text
 		position: relative
 		z-index: 2
 		margin-left: 50px
-		top: -340px
+		top: -300px
+		@include breakpoint(pad)
+			top: 0px
+		img
+			@include breakpoint(pad)
+				margin: 30px
+				width: 70%
+			@include breakpoint(mobile)
+				margin: 0px
+				width: 100%
+				margin-left: -30px
+				padding: 20px 0px 20px 0px
 
 		
 
 .la-TendaRossa
 	background-color: $bg-color
 	padding: 50px 20px 40px 0px
+	@include breakpoint(pad)
+		padding: 0px
 	.la-TendaRossa-pic
 		margin-top: 10px
 		z-index: 2
-		width: 75%
-
+		width: 85%
+		@include breakpoint(pad)
+			@include pad-pic
+			margin-top: 0px
 	.la-TendaRossa-inner
 		position: relative
 		margin-left: 10%
 		margin-top: -50px
-		img
-			width: 25%
+		@include breakpoint(pad)
+			margin-top: 0px
+			margin-left: 0px
 		.section-content	
 			position: relative
 			float: right
@@ -135,21 +203,36 @@ $font-size16: 16px
 			height: 450px
 			background-color: white;
 			left: -10%
-			margin-top: -500px
+			margin-top: -300px
 			padding: 50px 20px 50px 20px
 			line-height: 1.5
-			font-size: 19px
+			font-size: 16px
+			@include breakpoint(pad)
+				width: 100%
+				margin-top: 0px
+				float: none
+				left: 0px
+				padding: 0px
 			div
 				text-align: center
 			.rotate-div
 				@include rotate-div
 			.section-content-logo
-				border-top: 1px solid black
+				@include border-top
 				img
 					width: 45%
+					@include breakpoint(pad)
+						width: 100%
+					@include breakpoint(mobile)
+						width: 100%
 			.content
 				text-align: center
 				padding-top: 50px
+				@include breakpoint(pad)
+					padding: 10px
+				@include breakpoint(mobile)
+					font-size: 15px
+					padding: 10px
 				.rotate-div
 					@include rotate-div
 					margin-top: 50px
@@ -157,76 +240,170 @@ $font-size16: 16px
 					width: 250px
 			p
 				text-align: center
+	.la-TendaRossa-pic1
+		img
+			width: 20%
+			margin-left: 30px
+			@include breakpoint(pad)
+				@include pad-pic1	
+				margin-top: 30px	
+
 
 .DISH
 	background-color: $bg-color
-	padding: 50px
-	position: relative
+	padding: 100px 0px 100px 0px
+	@include breakpoint(pad)
+		padding: 0px
+
 	.inner
 		text-align: center
 		width: 25%
 		display: inline-block
-		padding: 30px
+		padding: 30px 10px 20px 20px
+		@include inner-top
+		@include breakpoint(pad)
+			@include pad-pic
+			padding: 0px
+			margin-bottom: 30px
 		.title
 			font-size: $font-size50
 			font-family: "Playfair Display", serif
 			margin-bottom: 0px
-			border-top: 1px solid black	
+			@include border-top
 		.title::first-letter
 			color: $title-color
 		.rotate-div
 			@include rotate-div
 		.content
 			font-size: $font-size16
+			@include breakpoint(mobile)
+				width: 80%
+				margin: auto
 			.black
 				font-weight: bolder
 		.box
 			@include box-style
-			margin-top: 15px
+			margin-top: 20px
 		
 	.DISH-pic
 		display: inline-block
-		width: 65%
-	.DISH-pic1
+		margin-left: 50px
+		@include pc-pic
 		position: absolute
-		width: 25%
+		@include breakpoint(pad)
+			width: 100%
+			margin-left: 0px
+	.DISH-pic1
+		position: relative
+		@include pc-pic1
 		display: inline-block
-		left: 60%
 		display: flex
-		margin-top: -15%
+		float: right
+		margin-top: 20%
+		margin-right: 10%
+		z-index: 19
+		@include breakpoint(pad)
+			@include pad-pic1
+			margin-top: 0px
+			margin-left: -30px
+			margin-bottom: 10px
+			margin-top: 55%
+			position: relative
 
 
+
+
+// .WINE
+// 	height: 400px
+// 	position: relative
+// 	background-color: $bg-color
+// 	padding: 100px 0px 100px 0px
+// 	@include breakpoint(pad)
+// 		padding: 0px
+// 	.WINE-pic
+// 		@include pc-pic
+// 		position: absolute
+// 		display: inline-block
+// 		@include breakpoint(pad)
+// 			@include pad-pic
+// 			position: relative
+// 	.WINE-pic1
+// 		position: relative
+// 		@include pc-pic1
+// 		left: 10%
+// 		top: 300px
+// 		z-index: 10
+// 		@include breakpoint(pad)
+// 			top: 0px
+// 			@include pad-pic1
+// 			display: block
+
+// 	.inner
+		// @include inner-top
+		// position: relative
+		// width: 25%
+		// text-align: center
+		// display: inline-block
+		// float: right
+		// margin-right: 50px
+		// @include breakpoint(pad)
+		// 	width: 100%
+		// 	margin: auto
+		// 	float: none
+		// .rotate-div
+		// 	@include rotate-div
+		// .title
+		// 	font-size: $font-size50
+		// 	font-family: "Playfair Display", serif
+		// 	margin-bottom: 0px	
+		// 	@include border-top		
+		// .title::first-letter
+		// 	color: $title-color
+		// .decoration1
+		// 	@include decoration1
+		// .decoration2
+		// 	@include decoration2
+		// .content
+		// 	font-size: $font-size16
+		// .box
+		// 	margin-top: 30px
+		// 	@include box-style
 
 
 .WINE
-	position: relative
+	padding: 30px
 	background-color: $bg-color
-	padding: 50px 100px 50px 50px
-	height: 450px
+	padding-bottom: 70px
+	@include breakpoint(pad)
+		padding: 0px
 	.WINE-pic
-		width: 60%
-		position: absolute
-		display: inline-block
-	.WINE-pic1
+		@include pc-pic
+		position: relative
+		@include breakpoint(pad)
+			width: 100%
+	.inner
+		@include inner-top
 		position: relative
 		width: 25%
-		left: 10%
-		top: 250px
-
-	.inner
-		position: relative
-		width: 28%
 		text-align: center
 		display: inline-block
 		float: right
+		margin-right: 50px
 		margin-top: 100px
+		@include breakpoint(pad)
+			width: 100%
+			margin: auto
+			float: none
+			margin-top: 50px
 		.rotate-div
 			@include rotate-div
 		.title
 			font-size: $font-size50
 			font-family: "Playfair Display", serif
 			margin-bottom: 0px	
-			border-top: 1px solid black		
+			@include border-top
+			@include breakpoint(mobile)
+				margin-top: 20px		
 		.title::first-letter
 			color: $title-color
 		.decoration1
@@ -235,59 +412,104 @@ $font-size16: 16px
 			@include decoration2
 		.content
 			font-size: $font-size16
+			@include breakpoint(pad)
+				width: 50%
+				margin: auto
+				line-height: 2
+			@include breakpoint(mobile)
+				width: 80%
 		.box
 			margin-top: 30px
 			@include box-style
+			height: auto
+	.WINE-pic1
+		position: relative		
+		z-index: 10
+		margin-left: 100px 
+		margin-top: -100px
+		width: 22%
+		@include breakpoint(pad)
+			margin-top: 0px
+			@include pad-pic1
+			padding-top: 20px
+			margin-left: 30px
+			margin-bottom: 10px
+
+
+
 
 .PARTY
 	background-color: $bg-color
 	position: relative
-	padding: 25px
+	@include breakpoint(pad)
+		padding: 0px
 	.inner
-		position: relative
+		@include inner-top
 		text-align: center
 		width: 25%
 		display: inline-block
 		padding: 30px
 		vertical-align: bottom
+		@include breakpoint(pad)
+			width: 100%
+			padding: 0px
+			margin: auto
+			margin: 50px 0px 50px 0px
 
 		.title
 			font-size: $font-size50
 			font-family: "Playfair Display", serif
 			margin-bottom: 0px
-			border-top: 1px solid black	
+			@include border-top
 		.title::first-letter
 			color: $title-color
 		.rotate-div
 			@include rotate-div
 		.content
 			font-size: $font-size16
+			@include breakpoint(pad)
+				width: 50%
+				margin: auto
+			@include breakpoint(mobile)
+				width: 80%
 		.box
 			margin-top: 30px
 			@include box-style	
-
 	.PARTY-pic
 		display: inline-block
-		width: 65%
+		@include pc-pic
+		float: right
+		@include breakpoint(pad)
+			width: 100%
 
 	.PARTY-pic1
-		position: absolute
-		width: 25%
+		position: relative
+		@include pc-pic1
 		display: inline-block
-		left: 60%
+		left: 70%
 		display: flex
-		margin-top: -15%
+		top: -100px
+		right: -65%
+		@include breakpoint(pad)
+			width: 35%
+			margin-top: 0px
+			margin-left: -80px
+			top: 0px
+			padding-bottom: 10px
 
 
 
 
 .slidebar
 	background-color: $bg-color
-	padding: 100px 0px 0px 0px
+	padding: 0px 0px 0px 0px
 	text-align: center
 	width: 100%
+	@include breakpoint(pad)
 	.img-1
 		width: 49%
+		@include breakpoint(pad)
+			width: 100%
 		.img-1-1
 			width: 49%
 			height: 500px
@@ -299,9 +521,16 @@ $font-size16: 16px
 			background-color: #f1f1e9
 			width: 100%
 			display: inline-block
+			@include breakpoint(pad)
+				margin: auto
+				margin-top: 0px
+
 	.img-2
 		margin-top: -17px
 		margin-left: 49%
+		@include breakpoint(pad)
+			margin-left: 0px
+			margin-top: 0px
 		.img-2-1
 			width: 49%
 			height: 498px
@@ -314,6 +543,10 @@ $font-size16: 16px
 			width: 100%
 			display: inline-block
 			margin-top: -505px
+			@include breakpoint(pad)
+				width: 100%
+				margin: auto
+
 
 	.slidebar-background
 		width: 33%
@@ -323,18 +556,29 @@ $font-size16: 16px
 		height: 300px
 		margin: auto
 		margin-top: -505px
+		@include breakpoint(pad)
+			width: 100%
+			margin-top: 0px
+			padding: 0px
+			height: auto
 		.slidebar-inner
 			border-top: 1px solid white
 			border-bottom: 1px solid white
 			color: white
 			font-family: "Playfair Display", serif		
 			line-height: 2
+
 			.rotate-div
 				@include rotate-div
 				background-color: white
 				margin-top: 15px
+				@include breakpoint(pad)
+					margin-top: 0px
+
 			.title
 				font-size: 40px
+				@include breakpoint(mobile)
+					font-size: 25px
 
 			.decoration1
 				width: 0px
@@ -353,6 +597,8 @@ $font-size16: 16px
 			@include click-border-w
 			width: 300px
 			margin: auto
+			@include breakpoint(mobile)
+				width: 250px
 
 .NEWS
 	background-color: $bg-color
@@ -362,6 +608,10 @@ $font-size16: 16px
 		width: 45%
 		font-size: $font-size20
 		margin: 50px
+		@include breakpoint(pad)
+			width: 100%
+			margin: 0px
+
 
 	.title
 		font-size: $font-size50
@@ -374,16 +624,22 @@ $font-size16: 16px
 		letter-spacing: 0.2em
 
 	.box
-		width: 300px
 		@include click-border-b
 		margin-left: 50px
 		font-size: $font-size20
+		width: 300px
+		@include breakpoint(pad)
+			@include box-style
 	.Calendar
 		width: 45%
 		height: 350px
 		float: right
 		background-color: white
-		margin-top: -400px
+		margin-top: -500px
+		@include breakpoint(pad)
+			width: 100%
+			margin-top: 0px
+			display: none
 		.style1
 			text-align: center
 			width: 81%
@@ -403,37 +659,68 @@ $font-size16: 16px
 	width: 100%
 	height: 450px
 	padding-top: 50px
+	@include breakpoint(pad)
+		height: 1000px
 	#google-maps
 		position: relative
 		vertical-align: middle
 		width: 60%
 		height: 400px
 		margin-left: 3%
+		@include breakpoint(pad)
+			width: 100%
+			margin-left: 0
 
 	.access-box	
 		@include click-border-w
 		font-size: $font-size20
 		width: 300px
 		margin: auto
+		@include breakpoint(pad)
+			float: left
+			width: 250px
 	.access-inner
 		line-height: 2
 		float: right
 		color: white
-		margin-top: -430px
+		margin-top: -450px
 		margin-right: 100px
-		width: 40%
+		width: 45%
+		@include breakpoint(pad)
+			margin-top: 0px
+			float: none
+			width: 100%
+			@include breakpoint(mobile)
+				margin-left: 0px
+				width: 100%
+				padding: 20px 0px 20px 0px
 		div
 			overflow: hidden
 			font-family: "Playfair Display", serif
 			font-size: 20px
-			margin-top: 10%
+			margin-top: 5%
+			padding-left: 20px
+			@include breakpoint(pad)
+				font-size: 19px
+			@include breakpoint(mobile)
+				padding-right: 20px
 			.title
 				width: 100px
 				float: left
 
 	.access-title
 		font-size: $font-size50
-
+.rolling-clock
+	position:fixed;
+	z-index:90;
+	right:3%;
+	bottom:5%;
+	display:none;
+	width:50px;
+	height:50px;
+	float: right
+		    
+	
 
 
 .footer
@@ -442,12 +729,14 @@ $font-size16: 16px
 	padding: 50px 30px 0px 30px
 	text-align: center
 	font-family: "Playfair Display", serif
+	@include breakpoint(mobile)
+		padding: 50px 10px 50px 10px
 	.box-title
 		font-size: $font-size20
 		border-top: 1px solid black
 		border-bottom: 1px solid black
-		width: 350px
 		margin: auto	
+		width: 70%
 		.p1
 			color: #730004
 		.p2
