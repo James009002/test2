@@ -1,79 +1,82 @@
 .header {
-  z-index: 99;
   position: fixed;
-  background-color: white;
-  height: 100px;
-  padding: 0px 30px 0px 30px;
   width: 100%;
-  font-family: fantasy;
-  text-align: center;
-  margin-left: -10px;
-  margin-top: -10px; }
-  @media only screen and (max-width: 930px) {
-    .header {
-      width: 100%; } }
-  .header i {
-    display: none; }
-    @media only screen and (max-width: 930px) {
-      .header i {
-        display: inline;
-        float: right;
-        margin-top: 50px;
-        margin-right: 10px; } }
-    @media only screen and (max-width: 367px) {
-      .header i {
-        margin-right: 20px; } }
-  .header .menu-button {
-    width: 0px;
-    height: 0px;
-    float: right;
-    background-color: black;
-    margin-right: 5%;
-    margin-top: 2%; }
-  .header .menu-logo {
+  height: 100px;
+  background-color: white;
+  z-index: 100; }
+  .header img {
+    width: 30%;
     display: inline-block;
-    margin-top: 45px; }
-    .header .menu-logo img {
-      width: 100%;
-      margin-left: -150px; }
-      @media only screen and (max-width: 930px) {
-        .header .menu-logo img {
-          width: 200%; } }
-      @media only screen and (max-width: 367px) {
-        .header .menu-logo img {
-          width: 100%;
-          float: right;
-          margin-left: -100px; } }
+    margin: 30px 0px 0px 30px; }
+    @media only screen and (max-width: 367px) {
+      .header img {
+        width: 70%; } }
   .header .menu-content {
     display: inline-block;
-    font-family: "Roboto", sans-serif; }
+    width: 55%;
+    letter-spacing: 4px;
+    margin-left: 5%;
+    font-size: 16px; }
     @media only screen and (max-width: 930px) {
+      .header .menu-content {
+        font-size: 12px; } }
+    @media only screen and (max-width: 367px) {
       .header .menu-content {
         display: none; } }
     .header .menu-content div {
-      width: 110px;
-      float: right;
-      font-size: 20px;
-      font-weight: bold; }
-      .header .menu-content div .line {
-        position: absolute;
-        bottom: 50%;
-        width: 100px;
-        height: 1px;
-        background-color: black;
-        display: block;
-        margin-top: -0px;
-        margin-left: 5px; }
-        @media only screen and (max-width: 930px) {
-          .header .menu-content div .line {
-            display: none; } }
-        @media only screen and (max-width: 367px) {
-          .header .menu-content div .line {
-            display: none; } }
+      display: inline-block; }
+  .header .dropdown-list {
+    display: inline-block;
+    width: 5%;
+    display: none; }
+    @media only screen and (max-width: 930px) {
+      .header .dropdown-list {
+        display: none; } }
+    @media only screen and (max-width: 367px) {
+      .header .dropdown-list {
+        display: inline;
+        margin-left: 30px; } }
 
 .rolling-click {
-  position: flexd;
-  top: 200px; }
+  width: 100px;
+  height: 100px;
+  position: fixed;
+  top: 90%;
+  left: 90%;
+  z-index: 99; }
+  @media only screen and (max-width: 930px) {
+    .rolling-click {
+      margin-left: -25px; } }
+  @media only screen and (max-width: 367px) {
+    .rolling-click {
+      margin-left: -25px; } }
+
+@media only screen and (max-width: 1024px) {
+  #mobile-menu {
+    display: none; } }
+
+@media only screen and (max-width: 930px) {
+  #mobile-menu {
+    display: none; } }
+
+@media only screen and (max-width: 367px) {
+  #mobile-menu {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    z-index: 999;
+    top: 100px;
+    text-align: center; }
+    #mobile-menu div {
+      background-color: black;
+      color: white;
+      margin-top: 4px;
+      font-size: 25px;
+      padding: 30px; }
+    #mobile-menu .reservation {
+      background-color: #730004; } }
 
 .container {
   background-color: #f1f1e9; }
@@ -86,6 +89,9 @@
         .container .container-pic img {
           width: 100%;
           margin-top: 30px; } }
+      @media only screen and (max-width: 367px) {
+        .container .container-pic img {
+          margin-top: 50px; } }
   .container .container-text {
     position: relative;
     z-index: 2;
@@ -165,7 +171,7 @@
           .la-TendaRossa .la-TendaRossa-inner .section-content .section-content-logo {
             width: 50%; } }
         .la-TendaRossa .la-TendaRossa-inner .section-content .section-content-logo img {
-          width: 45%; }
+          width: 70%; }
           @media only screen and (max-width: 930px) {
             .la-TendaRossa .la-TendaRossa-inner .section-content .section-content-logo img {
               width: 100%; } }
@@ -295,7 +301,7 @@
         position: relative; } }
 
 .WINE {
-  padding: 30px;
+  padding: 50px 30px 30px 0px;
   background-color: #f1f1e9;
   padding-bottom: 70px; }
   @media only screen and (max-width: 930px) {
@@ -461,6 +467,7 @@
           width: 250px; } }
   .PARTY .PARTY-pic {
     display: inline-block;
+    margin-top: 30px;
     width: 65%;
     float: right; }
     @media only screen and (max-width: 930px) {
@@ -471,10 +478,7 @@
     width: 22%;
     display: inline-block;
     left: 70%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    top: -100px;
+    top: -30px;
     right: -65%; }
     @media only screen and (max-width: 930px) {
       .PARTY .PARTY-pic1 {
@@ -486,7 +490,7 @@
 
 .slidebar {
   background-color: #f1f1e9;
-  padding: 0px 0px 0px 0px;
+  padding: 30px 0px 0px 0px;
   text-align: center;
   width: 100%; }
   .slidebar .img-1 {
@@ -567,7 +571,7 @@
           .slidebar .slidebar-background .slidebar-inner .rotate-div {
             margin-top: 0px; } }
       .slidebar .slidebar-background .slidebar-inner .title {
-        font-size: 40px; }
+        font-size: 35px; }
         @media only screen and (max-width: 930px) {
           .slidebar .slidebar-background .slidebar-inner .title {
             font-size: 35px; } }
@@ -600,13 +604,17 @@
   padding: 20px;
   line-height: 2; }
   .NEWS .inner {
-    width: 45%;
+    width: 40%;
     font-size: 20px;
-    margin: 50px; }
+    margin: 50px;
+    display: inline-block; }
     @media only screen and (max-width: 930px) {
       .NEWS .inner {
-        width: 100%;
+        width: 45%;
         margin: 0px; } }
+    @media only screen and (max-width: 930px) {
+      .NEWS .inner {
+        width: 100%; } }
   .NEWS .title {
     font-size: 50px; }
     .NEWS .title .title-change {
@@ -634,25 +642,43 @@
     .NEWS .box {
       width: 250px; } }
   .NEWS .Calendar {
-    width: 45%;
+    width: 40%;
     height: 350px;
-    float: right;
     background-color: white;
-    margin-top: -500px; }
+    margin-top: -450px;
+    display: inline-block; }
     @media only screen and (max-width: 930px) {
       .NEWS .Calendar {
-        width: 100%;
         margin-top: 0px;
-        display: none; } }
+        width: 100%; } }
+    @media only screen and (max-width: 367px) {
+      .NEWS .Calendar {
+        width: 100%; } }
     .NEWS .Calendar .style1 {
       text-align: center;
       width: 81%;
       font-weight: bold;
       font-size: 30px;
-      height: 50px;
       margin-top: -5px;
       margin: auto;
-      margin-top: 130px; }
+      font-size: 21px;
+      font-family: "Playfair Display", serif; }
+      .NEWS .Calendar .style1 .week {
+        border-top: 1px solid black;
+        border-bottom: 1px solid black; }
+      .NEWS .Calendar .style1 .week2 {
+        background-color: #f6f6f1; }
+      .NEWS .Calendar .style1 .week4 {
+        background-color: #f6f6f1; }
+      .NEWS .Calendar .style1 div {
+        width: 100%; }
+        .NEWS .Calendar .style1 div .Holiday {
+          background-color: #806700 !important; }
+        .NEWS .Calendar .style1 div .special {
+          background-color: #730004 !important; }
+        .NEWS .Calendar .style1 div p {
+          display: inline-block;
+          width: 12%; }
     .NEWS .Calendar .style2 {
       width: 400px;
       text-align: center;
