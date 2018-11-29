@@ -49,6 +49,15 @@
 		</div>			
 	</div>
 
+	<div class="opening-animate">
+
+		<div style="width: 100%;top:40%;z-index:999;text-align: center;position:fixed">
+			<img src="img/logo.svg" style="width: 50%;margin:auto">
+		</div>
+	</div>
+
+
+
 	<div class="la-TendaRossa">
 		<div class="la-TendaRossa-pic">
 			<img src="img/section1-pic.png" class="la-TendaRossa-pic">
@@ -322,8 +331,11 @@
 			});
 		});
 
-
-
+		$(function(){
+			$("body").mouseover(function(){
+				$(".opening-animate").fadeOut(1000)
+			});
+		});
 
 		$(function() {
 	    	$('#rolling1').click(function(){

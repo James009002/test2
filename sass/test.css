@@ -111,6 +111,16 @@
         margin-left: -30px;
         padding: 20px 0px 20px 0px; } }
 
+.opening-animate {
+  position: fixed;
+  width: 100%;
+  background-color: white;
+  height: 100%;
+  z-index: 100;
+  top: 0px;
+  height: 0px;
+  height: 1000px; }
+
 .la-TendaRossa {
   background-color: #f1f1e9;
   padding: 50px 20px 40px 0px; }
