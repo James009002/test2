@@ -120,6 +120,15 @@
   top: 0px;
   height: 0px;
   height: 1000px; }
+  .opening-animate .mid {
+    position: fixed;
+    width: 100%;
+    top: 40%;
+    z-index: 999;
+    text-align: center; }
+    .opening-animate .mid img {
+      width: 50%;
+      margin: auto; }
 
 .la-TendaRossa {
   background-color: #f1f1e9;
