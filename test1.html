@@ -83,7 +83,10 @@
 	</div>
 
 
+
+
 	<div class="DISH">
+		<img src="img/section2-pic.png" class="DISH-pic">
 		<div class="inner">
 			<p class="title">DISH</p>
 			<div class="rotate-div"></div>
@@ -100,12 +103,8 @@
 				<p>DINNER</p>
 			</div>
 		</div>
-		<img src="img/section2-pic.png" class="DISH-pic">
 		<img src="img/section2-pic1.png" class="DISH-pic1">
 	</div>
-
-
-
 
 
 
@@ -191,7 +190,10 @@
 				<u>夏季休業のお知らせ</u>
 				<p>2018/04/10</p>
 				<u>価格改定のお知らせ</u>
-			</div>		
+			</div>
+			<div class="box">
+				<p>More</p>
+			</div>			
 		</div>	
 
 		<div class="Calendar">
@@ -319,6 +321,13 @@
 				$("#mobile-menu").slideToggle(1000)
 			});
 		});
+
+		$(function(){
+			$("#choose-click").click(function(){
+				$("body").css("position","fixed")
+			});
+		});
+
 
 
 		$(function() {

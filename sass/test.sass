@@ -252,10 +252,14 @@ $font-size16: 16px
 
 .DISH
 	background-color: $bg-color
-	padding: 100px 0px 100px 0px
-	@include breakpoint(pad)
-		padding: 0px
-
+	padding-top: -10%
+	.DISH-pic
+		margin-top: 60px
+		width: 60%
+		position: relative
+		float: right
+		@include breakpoint(pad)
+			@include pad-pic
 	.inner
 		text-align: center
 		width: 25%
@@ -289,33 +293,15 @@ $font-size16: 16px
 		.box
 			@include box-style
 			margin-top: 20px
-		
-	.DISH-pic
-		display: inline-block
-		margin-left: 50px
-		@include pc-pic
-		position: absolute
-		@include breakpoint(pad)
-			width: 100%
-			margin-left: 0px
 	.DISH-pic1
 		position: relative
-		@include pc-pic1
-		display: inline-block
-		display: flex
-		float: right
-		margin-top: 20%
-		margin-right: 10%
-		z-index: 19
+		width: 20%
+		left: 60%
+		margin-top: -100px
 		@include breakpoint(pad)
 			@include pad-pic1
-			margin-top: 0px
-			margin-left: -30px
-			margin-bottom: 10px
-			margin-top: 55%
-			position: relative
-
-
+			margin-top: 50px
+			margin-bottom: 20px
 
 
 

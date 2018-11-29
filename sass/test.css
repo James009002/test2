@@ -212,10 +212,15 @@
 
 .DISH {
   background-color: #f1f1e9;
-  padding: 100px 0px 100px 0px; }
-  @media only screen and (max-width: 930px) {
-    .DISH {
-      padding: 0px; } }
+  padding-top: -10%; }
+  .DISH .DISH-pic {
+    margin-top: 60px;
+    width: 60%;
+    position: relative;
+    float: right; }
+    @media only screen and (max-width: 930px) {
+      .DISH .DISH-pic {
+        width: 100%; } }
   .DISH .inner {
     text-align: center;
     width: 25%;
@@ -271,34 +276,16 @@
       @media only screen and (max-width: 367px) {
         .DISH .inner .box {
           width: 250px; } }
-  .DISH .DISH-pic {
-    display: inline-block;
-    margin-left: 50px;
-    width: 65%;
-    position: absolute; }
-    @media only screen and (max-width: 930px) {
-      .DISH .DISH-pic {
-        width: 100%;
-        margin-left: 0px; } }
   .DISH .DISH-pic1 {
     position: relative;
-    width: 22%;
-    display: inline-block;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    float: right;
-    margin-top: 20%;
-    margin-right: 10%;
-    z-index: 19; }
+    width: 20%;
+    left: 60%;
+    margin-top: -100px; }
     @media only screen and (max-width: 930px) {
       .DISH .DISH-pic1 {
         width: 35%;
-        margin-top: 0px;
-        margin-left: -30px;
-        margin-bottom: 10px;
-        margin-top: 55%;
-        position: relative; } }
+        margin-top: 50px;
+        margin-bottom: 20px; } }
 
 .WINE {
   padding: 50px 30px 30px 0px;
