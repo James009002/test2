@@ -9,8 +9,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1" >
 	<title>web</title>
 </head>
+<style>
+	.open { overflow: hidden; }
+	#mobile-menu {top:-100vh;transition: all 1s ease;display: block}
+	.open #mobile-menu {top:100px; }
+</style>
 <body>		
-
 
 	<div class="header">
 		<img src="img/logo.svg">
@@ -326,7 +330,8 @@
 	<script>
 		$(function(){
 			$("#choose-click").click(function(){
-				$("#mobile-menu").slideToggle(1000)
+				// $("#mobile-menu").slideToggle(1000);
+				$('body').toggleClass('open');
 			});
 		});
 
