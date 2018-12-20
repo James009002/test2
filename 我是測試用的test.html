@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test2</title>
+	<link rel="stylesheet" href="css/test1.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<html lang="zh-TW">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" >	
+	<style>
+
+	</style>
+</head>
+<body>
+
+
+
+	<i class="fas fa-align-justify"></i>
+
+
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+
+				function scrollWin() {
+		    window.scrollTo(0,300);
+		}
+
+
+
+
+		$(document).ready(function(){
+			$("#animation-test").mouseover(function(){
+				$("#rolling1").fadeIn(1000);
+			});
+		});
+
+		$(document).ready(function(){
+			$("#animation").mouseover(function(){
+				$("#rolling2").fadeIn(1000);
+			});
+		});
+
+
+		$(document).ready(function(){
+			$("#contact").click(function(){
+				$("#rolling3").fadeIn(1000);
+			});
+		});
+
+
+
+
+
+
+ 		$(document).ready(function(){
+ 			$("#clickme4").click(function(){
+ 				$("#clickme3").slideToggle()
+ 			});
+ 		});
+
+
+		$(document).ready(function(){
+			$("#animation-test").mouseover(function(){
+				$("#clickme3").animate({top:"120px"})
+			});
+		});
+		
+		$(document).ready(function(){
+			$("#jap").click(function(){
+				$("#menu").slideToggle(1000)
+			});
+		});
+
+		$(document).ready(function(){
+			$("#animation").mouseover(function(){
+				$("#animation1").fadeIn(2000);
+			});
+		});
+
+
+		$(document).ready(function(){
+			$("#animation-test").mouseover(function(){
+				$("#animation3").fadeIn(3000);
+			});
+		});
+
+		$(document).ready(function(){
+			$("#contact").click(function(){
+				$("#googlemaps").fadeToggle(1000)
+			});
+		});
+
+
+		$(document).ready(function(){
+			$("#clickme3").mouseover(function(){
+				$("#clickme4").slideToggle(2000)
+			});
+		});
+
+
+		$(document).ready(function(){
+			$("#clickme1").click(function(){
+				$("#clickme2").toggle(2000)
+			});
+		});
+
+		$(document).ready(function(){
+			$("#button").click(function(){
+				$("#showme").slideToggle(500)
+			});
+		});
+
+
+
+		$(function() {
+	    	$('#rolling1').click(function(){
+	        	$('html,body').animate({ scrollTop: 1000 }, 'fast'); 
+	      	  return false;
+	    	});
+    	});
+    
+	 
+		$(function() {
+	    	$('#rolling2').click(function(){
+	        	$('html,body').animate({ scrollTop: 2100 }, 'fast'); 
+	      	  return false;
+	    	});
+    	});	 
+
+		$(function() {
+	    	$('#rolling3').click(function(){
+	        	$('html,body').animate({ scrollTop: 3700 }, 'fast'); 
+	      	  return false;
+	    	});
+    	});	 
+
+
+		$(function() {
+    		$('#gotop').click(function(){
+        	$('html,body').animate({ scrollTop: 0 }, 'fast'); 
+      	  return false;
+    	});
+    
+	    $(window).scroll(function() {
+	        if ( $(this).scrollTop() > 100){
+	            $('#gotop').fadeIn();
+	        } else {
+	            $('#gotop').fadeOut();
+		        }
+		    });
+		});
+
+
+
+
+</script>
+</html>
